@@ -8,7 +8,8 @@
     <Color x:Key="Secondary">#7F39FB</Color>
     <Color x:Key="Tertiary">#2B0B98</Color>
 
-    <Color x:Key="Background">White</Color>
+    <Color x:Key="LightBackground">White</Color>
+    <Color x:Key="DarkBackground">#121212</Color>
 
     <Color x:Key="White">White</Color>
     <Color x:Key="Black">Black</Color>
@@ -25,8 +26,12 @@
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>
     <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}"/>
 
-    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource Background}" />
-
+    <SolidColorBrush x:Key="LightBackgroundBrush"
+                     Color="{StaticResource LightBackground}" />
+    <SolidColorBrush x:Key="DarkBackgroundBrush"
+                     Color="{StaticResource DarkBackground}" />
+    
+    
     <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
     <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}"/>
     <SolidColorBrush x:Key="Gray100Brush" Color="{StaticResource Gray100}"/>

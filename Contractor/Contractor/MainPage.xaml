@@ -5,7 +5,7 @@
              xmlns:vm="clr-namespace:Contractor.ViewModel"
              x:Class="Contractor.MainPage"
              Title=""
-             Background="{DynamicResource Background}"
+             Background="{AppThemeBinding Dark={DynamicResource DarkBackground}, Light={DynamicResource LightBackground}}"
              >
 
     <ContentPage.BindingContext>
@@ -18,7 +18,7 @@
         <Grid RowDefinitions="Auto, Auto">
             <Label Text="Hey There!"
                    FontFamily="RobotoBlack"
-                   TextColor="Black"
+                   TextColor="{AppThemeBinding Dark={DynamicResource White}, Light={DynamicResource Black}}"
                    FontSize="40"/>
 
             <components:FreeTimeInfoText Grid.Row="1" />

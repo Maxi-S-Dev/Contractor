@@ -8,7 +8,7 @@
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="25" />
                 <Setter Property="FontFamily" Value="RobotoRegular" />
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={DynamicResource White}, Light={DynamicResource Black}}" />
             </Style>
         </ResourceDictionary>
     </ContentView.Resources>
