@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:Contractor.Drawables"
+             x:Class="Contractor.Components.RoundProgressBar">
+    <Grid VerticalOptions="Center">
+        
+        <GraphicsView Drawable="{Binding MyDrawable}"
+                      HeightRequest="400"
+                      x:Name="test"
+                      VerticalOptions="Center"/>
+
+        <Grid HorizontalOptions="Center"
+              VerticalOptions="Center"
+              RowDefinitions="auto, auto"
+              RowSpacing="-6">
+            <Label Text="13:28"
+                   FontFamily="RobotoRegular"
+                   FontSize="45"
+                   TextColor="Black" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Label Text="Time elapsed"
+                   FontFamily="RobotoRegular"
+                   FontSize="18"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" 
+                   Grid.Row="1"/>
+        </Grid>
+
+    </Grid>
+    
+</ContentView>

@@ -1,16 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Contractor.MainPage">
+             xmlns:components="clr-namespace:Contractor.Components"
+             xmlns:vm="clr-namespace:Contractor.ViewModel"
+             x:Class="Contractor.MainPage"
+             Title=""
+             Background="{DynamicResource Background}"
+             >
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="5"
-            VerticalOptions="StartAndExpand">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
 
+    <Grid RowDefinitions="Auto, *, Auto"
+          Padding="20">
 
-        </VerticalStackLayout>
-    </ScrollView>
+        <Grid RowDefinitions="Auto, Auto">
+            <Label Text="Hey There!"
+                   FontFamily="RobotoBlack"
+                   TextColor="Black"
+                   FontSize="40"/>
+
+            <components:FreeTimeInfoText Grid.Row="1" />
+        </Grid>
+
+        <components:TimerCarouselView Grid.Row="1"
+                                      VerticalOptions="Center"
+                                      BindingContext="{Binding TimerCarouselVm}"/>
+
+        <Grid Grid.Row="2" RowDefinitions="auto, auto" RowSpacing="4">
+            <Grid>
+                <Button Background="#6200EE"></Button>
+                <Label TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       FontFamily="RobotoRegular"
+                       VerticalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Start Being " />
+                            <Span Text="Productive"
+                                  FontAttributes="Bold" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Button Background="#7F39FB"></Button>
+                <Label TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       VerticalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Enjoy your "/>
+                            <Span Text="Free Time"
+                                  FontAttributes="Bold" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                    
+                </Label>
+                
+            </Grid>
+            
+            
+        </Grid>
+    </Grid>
 
 </ContentPage>

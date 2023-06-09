@@ -15,7 +15,7 @@
 
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}"
                       Route="MainPage"
-                      Title="Main"/>
+                      Title="Timers"/>
 
         <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}"
                       Route="SettingsPage"
