@@ -3,9 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:drawable="clr-namespace:Contractor.Drawables"
              x:Class="Contractor.Components.RoundProgressBar">
+    <ContentView.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={DynamicResource White}, Light={DynamicResource Black}}" />
+        </Style>
+    </ContentView.Resources>
+    
     <Grid VerticalOptions="Center">
-        
-        <GraphicsView Drawable="{Binding MyDrawable}"
+
+        <GraphicsView Drawable="{Binding ClockDrawable}"
                       HeightRequest="400"
                       x:Name="test"
                       VerticalOptions="Center"/>
@@ -14,17 +21,15 @@
               VerticalOptions="Center"
               RowDefinitions="auto, auto"
               RowSpacing="-6">
-            <Label Text="13:28"
+            <Label Text="{Binding Time}"
                    FontFamily="RobotoRegular"
                    FontSize="45"
-                   TextColor="Black" 
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
 
-            <Label Text="Time elapsed"
+            <Label Text="{Binding Text}"
                    FontFamily="RobotoRegular"
                    FontSize="18"
-                   TextColor="Black"
                    HorizontalOptions="Center"
                    VerticalOptions="Center" 
                    Grid.Row="1"/>

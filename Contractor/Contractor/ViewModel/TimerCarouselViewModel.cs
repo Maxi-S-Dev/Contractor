@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contractor.Enums;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,10 +10,29 @@ namespace Contractor.ViewModel
 {
     public class TimerCarouselViewModel : ViewModelBase
     {
-        private ObservableCollection<Timer> timerList;
+        public RoundProgressBarViewModel productiveTimer;
+        public RoundProgressBarViewModel ProductiveTimer 
+        {
+            get => productiveTimer;
+            private set
+            { 
+                productiveTimer = value;
+                OnPropertyChanged(nameof(ProductiveTimer));
+            } 
+        }
 
-        RoundProgressBarViewModel roundProgressBarViewModel1;
-        RoundProgressBarViewModel roundProgressBarViewModel2;
+        public RoundProgressBarViewModel freeTimeTimer;
+        public RoundProgressBarViewModel FreeTimeTimer 
+        { get => freeTimeTimer; 
+            private set
+            {
+                freeTimeTimer = value;
+                OnPropertyChanged(nameof(FreeTimeTimer));
+            }
+                 
+        }
+
+        private ObservableCollection<Timer> timerList;
 
         public ObservableCollection<Timer> TimerList
         {
@@ -23,12 +43,13 @@ namespace Contractor.ViewModel
                 OnPropertyChanged();
             }
         }
-        
-
 
         public TimerCarouselViewModel() 
         {
-            TimerList = new ObservableCollection<Timer> { new Timer() { Context = new RoundProgressBarViewModel(0) }, new Timer() { Context = new RoundProgressBarViewModel(1) } };
+            productiveTimer = new RoundProgressBarViewModel(TimerType.Productive);
+            freeTimeTimer = new RoundProgressBarViewModel(TimerType.FreeTimer);
+
+            TimerList = new ObservableCollection<Timer> { new Timer() { Context = productiveTimer }, new Timer() { Context = freeTimeTimer } };
         }
     }
 

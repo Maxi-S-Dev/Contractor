@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Contractor.Enums
 {
-    enum TimerType
+    public enum TimerType
     {
-        elapsed, remaining
+        Productive, FreeTimer
     }
 }

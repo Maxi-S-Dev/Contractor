@@ -34,6 +34,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Components.Roun
 build_metadata.AdditionalFiles.TargetPath = Components\RoundProgressBar.xaml
 build_metadata.AdditionalFiles.RelativePath = Components\RoundProgressBar.xaml
 
+[D:/github/Contractor/Contractor/Contractor/Components/TimeListView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Components.TimeListView.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\TimeListView.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\TimeListView.xaml
+
 [D:/github/Contractor/Contractor/Contractor/Components/TimerCarouselView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Components.TimerCarouselView.xaml
@@ -51,12 +57,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Contractor.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
-
-[D:/github/Contractor/Contractor/Contractor/Resources/Styles/DarkModeColors.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Resources.Styles.DarkModeColors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\DarkModeColors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\DarkModeColors.xaml
 
 [D:/github/Contractor/Contractor/Contractor/Resources/Styles/LightModeColors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -1,36 +1,114 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Contractor.Drawables;
+using Contractor.Enums;
+using Contractor.Container;
+using System.Xml;
+using System.Reflection.Metadata;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using Contractor.Drawables;
-using Color = Microsoft.Maui.Graphics.Color;
 
 namespace Contractor.ViewModel
 {
     public class RoundProgressBarViewModel : ViewModelBase
     {
-        public ClockDrawable MyDrawable { get; }
+        private string time;
+        public string Time 
+        { 
+            get => time;
+            set
+            {
+                time = value;
+                OnPropertyChanged(nameof(Time));
+            }
+        
+        }
 
-        public RoundProgressBarViewModel(int i)
+        string text;
+        public string Text
         {
-            if(i == 1) MyDrawable = new ClockDrawable(1);
-            else MyDrawable = new ClockDrawable(2);
+            get => text;
+            set
+            {
+                text = value;
+                OnPropertyChanged(nameof(Text));
+            }
+        }
 
+        public ClockDrawable ClockDrawable { get; }
+
+        float tickRate = 0;
+        float degree;
+
+        public RoundProgressBarViewModel(TimerType timerType)
+        {
+            ClockDrawable = new ClockDrawable(timerType);
+
+            CalculateTickRate(timerType);
+            CalculateDegrees(timerType);
+            SetText(timerType);
+
+            if (timerType == TimerType.Productive) SetTimeText(DataStorage.ProdSeconds);
+            else if (timerType == TimerType.FreeTimer) SetTimeText(DataStorage.FreeSeconds);
 
             var timer = Application.Current.Dispatcher.CreateTimer();
-            timer.Interval = TimeSpan.FromSeconds(.1);
+            timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += (s, e) =>
             {
-                MyDrawable.AddDegrees(.5f);
-                OnPropertyChanged(nameof(MyDrawable));
+                ClockDrawable.AddDegrees(degree);
+                OnPropertyChanged(nameof(ClockDrawable));
+
+
+                if (timerType == TimerType.Productive)
+                {
+                    DataStorage.ProdSeconds += 1;
+                    Trace.WriteLine(DataStorage.ProdSeconds);
+                }
+
+                if (timerType == TimerType.Productive) SetTimeText(DataStorage.ProdSeconds);
+                else if (timerType == TimerType.FreeTimer) SetTimeText(DataStorage.FreeSeconds);
             };
             timer.Start();
-        }   
+        }
+
+        private void CalculateDegrees(TimerType timerType)
+        {
+            if (timerType == TimerType.Productive)
+            {
+                degree = 360 / DataStorage.MaxProductiveTime;
+                return;
+            }
+
+            tickRate = DataStorage.MaxFreeTime / 720;
+        }
+
+        private void CalculateTickRate(TimerType timerType)
+        {
+            if(timerType == TimerType.Productive)
+            { 
+                tickRate = DataStorage.MaxProductiveTime / 720;
+                return;
+            }
+
+            tickRate = DataStorage.MaxFreeTime / 720;
+        }
+
+        private void SetText(TimerType timerType)
+        {
+            if (timerType == TimerType.Productive)
+            {
+                Text = "Time elapsed";
+                return;
+            }
+            Text = "Time remaining";
+        }
+
+        private void SetTimeText(int time)
+        {
+            string hours = (time / 3600).ToString();
+            if (hours.Length == 1) hours = "0" + hours;
+            
+            string minutes = ((time % 3600) / 60).ToString();
+            if (minutes.Length == 1) minutes = "0" + minutes;
+
+            Time = $"{hours}:{minutes}";
+        }
     }
 }
-

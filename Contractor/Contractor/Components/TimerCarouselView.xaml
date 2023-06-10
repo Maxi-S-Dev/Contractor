@@ -4,6 +4,8 @@
              xmlns:compontents="clr-namespace:Contractor.Components"
              x:Class="Contractor.Components.TimerCarouselView">
 
+    
+    
     <CarouselView ItemsSource="{Binding TimerList}">
         <CarouselView.ItemTemplate>
             <DataTemplate>

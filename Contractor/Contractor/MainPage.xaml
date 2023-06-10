@@ -5,15 +5,11 @@
              xmlns:vm="clr-namespace:Contractor.ViewModel"
              x:Class="Contractor.MainPage"
              Title=""
-             Background="{AppThemeBinding Dark={DynamicResource DarkBackground}, Light={DynamicResource LightBackground}}"
-             >
-
-    <ContentPage.BindingContext>
-        <vm:MainViewModel />
-    </ContentPage.BindingContext>
+             Background="{AppThemeBinding Dark={DynamicResource DarkBackground}, Light={DynamicResource LightBackground}}">
 
     <Grid RowDefinitions="Auto, *, Auto"
-          Padding="20">
+          Padding="20"
+          x:Name="MainGrid">
 
         <Grid RowDefinitions="Auto, Auto">
             <Label Text="Hey There!"
@@ -24,9 +20,7 @@
             <components:FreeTimeInfoText Grid.Row="1" />
         </Grid>
 
-        <components:TimerCarouselView Grid.Row="1"
-                                      VerticalOptions="Center"
-                                      BindingContext="{Binding TimerCarouselVm}"/>
+        
 
         <Grid Grid.Row="2" RowDefinitions="auto, auto" RowSpacing="4">
             <Grid>
