@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-10T21:10:55.193</Modified>
+      <Modified>2023-06-11T16:19:26.426</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-06-10T21:10:54.999</Modified>
+      <Modified>2023-06-11T16:17:27.417</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Contractor.runtimeconfig.json">
       <PackagePath>Contractor.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Contractor.dll">
       <PackagePath>Contractor.dll</PackagePath>
-      <Modified>2023-06-10T21:10:54.386</Modified>
+      <Modified>2023-06-11T16:19:25.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Contractor.exe</PackagePath>
-      <Modified>2023-06-10T21:10:54.393</Modified>
+      <Modified>2023-06-11T16:19:25.665</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\max03\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.5\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -920,7 +920,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Contractor.deps.json">
       <PackagePath>Contractor.deps.json</PackagePath>
-      <Modified>2023-06-10T21:10:55.120</Modified>
+      <Modified>2023-06-11T16:19:26.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

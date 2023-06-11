@@ -14,6 +14,7 @@
 
         <GraphicsView Drawable="{Binding ClockDrawable}"
                       HeightRequest="400"
+                      WidthRequest="220"
                       x:Name="test"
                       VerticalOptions="Center"/>
 
