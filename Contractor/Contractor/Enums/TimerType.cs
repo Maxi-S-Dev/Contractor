@@ -8,6 +8,6 @@ namespace Contractor.Enums
 {
     public enum TimerType
     {
-        Productive, FreeTimer
+        Productive, FreeTime
     }
 }

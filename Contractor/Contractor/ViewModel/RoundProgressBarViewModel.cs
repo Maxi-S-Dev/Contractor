@@ -4,6 +4,7 @@ using Contractor.Container;
 using System.Xml;
 using System.Reflection.Metadata;
 using System.Diagnostics;
+using Contractor.Timers;
 
 namespace Contractor.ViewModel
 {
@@ -41,31 +42,19 @@ namespace Contractor.ViewModel
         {
             ClockDrawable = new ClockDrawable(timerType);
 
-            CalculateTickRate(timerType);
             CalculateDegrees(timerType);
-            SetText(timerType);
 
-            if (timerType == TimerType.Productive) SetTimeText(DataStorage.ProdSeconds);
-            else if (timerType == TimerType.FreeTimer) SetTimeText(DataStorage.FreeSeconds);
-
-            var timer = Application.Current.Dispatcher.CreateTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Tick += (s, e) =>
+            MainTimer.Dispatcher.Tick += (s, e) =>
             {
-                ClockDrawable.AddDegrees(degree);
+                //ClockDrawable.AddDegrees(degree);
+
+                float percent = (DataStorage.ProdSeconds * 100) / DataStorage.MaxProductiveTime;
+
+                ClockDrawable.SetDegreesUsingPercent(percent);
                 OnPropertyChanged(nameof(ClockDrawable));
 
-
-                if (timerType == TimerType.Productive)
-                {
-                    DataStorage.ProdSeconds += 1;
-                    Trace.WriteLine(DataStorage.ProdSeconds);
-                }
-
-                if (timerType == TimerType.Productive) SetTimeText(DataStorage.ProdSeconds);
-                else if (timerType == TimerType.FreeTimer) SetTimeText(DataStorage.FreeSeconds);
+                SetTimeText(timerType);
             };
-            timer.Start();
         }
 
         private void CalculateDegrees(TimerType timerType)
@@ -75,8 +64,6 @@ namespace Contractor.ViewModel
                 degree = 360 / DataStorage.MaxProductiveTime;
                 return;
             }
-
-            tickRate = DataStorage.MaxFreeTime / 720;
         }
 
         private void CalculateTickRate(TimerType timerType)
@@ -90,18 +77,21 @@ namespace Contractor.ViewModel
             tickRate = DataStorage.MaxFreeTime / 720;
         }
 
-        private void SetText(TimerType timerType)
+        private void SetTimeText(TimerType timerType)
         {
+            int time = 0;
+
             if (timerType == TimerType.Productive)
             {
                 Text = "Time elapsed";
-                return;
+                time = DataStorage.ProdSeconds;
             }
-            Text = "Time remaining";
-        }
+            else if (timerType == TimerType.FreeTime)
+            {
+                Text = "Time remaining";
+                time = DataStorage.FreeSeconds;
+            }
 
-        private void SetTimeText(int time)
-        {
             string hours = (time / 3600).ToString();
             if (hours.Length == 1) hours = "0" + hours;
             
@@ -110,5 +100,7 @@ namespace Contractor.ViewModel
 
             Time = $"{hours}:{minutes}";
         }
+
+        
     }
 }

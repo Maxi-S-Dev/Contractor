@@ -22,7 +22,7 @@ public partial class RoundProgressBar : ContentView
         {
             vM.PropertyChanged += (s, m) => redrawGraphicsView();
         }
-        catch (Exception ex) { }
+        catch{ }
     }
 
     private void redrawGraphicsView()

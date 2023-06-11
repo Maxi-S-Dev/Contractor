@@ -11,12 +11,12 @@ namespace Contractor.Drawables
         const int width = 200;
         const int height = 200;
 
-        const int radius = width/2;
+        const int radius = width / 2;
 
         const int strokeSize = 1;
 
-        const int barWidth= 10;
-        const int halfBarWidth = barWidth/2;
+        const int barWidth = 10;
+        const int halfBarWidth = barWidth / 2;
 
         float circleX = 0;
         float circleY = 0;
@@ -25,10 +25,7 @@ namespace Contractor.Drawables
 
         Color Color = Colors.Red;
 
-        public ClockDrawable(TimerType type)
-        {
-            SetMainColor(type);
-        }
+        public ClockDrawable(TimerType type) => SetMainColor(type);
         
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
@@ -52,10 +49,14 @@ namespace Contractor.Drawables
             canvas.FillColor = Color;
             canvas.FillCircle(circleX, circleY, barWidth/2);
         }
-        
-        public void AddDegrees (float inputDegree)
+
+        public void SetDegreesUsingPercent(float percent)
         {
-            degree -= inputDegree;
+            degree = -3.6f * percent;
+        }
+        public void AddDegrees(float inputDegrees)
+        {
+            degree -= inputDegrees;
             degree = degree % 360;
         }
 

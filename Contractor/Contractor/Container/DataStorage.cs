@@ -12,9 +12,13 @@ namespace Contractor.Container
 
         public static float Factor = 1.5f;
         
-        public static int ProdSeconds = 0;
+        public static int ProdSeconds = eightHours;
         public static int FreeSeconds 
         { 
+            set
+            {
+                ProdSeconds = ProdSeconds -= Convert.ToInt32(1 * Factor);
+            }
             get 
             { 
                 int time = Convert.ToInt32(ProdSeconds / Factor);
@@ -22,7 +26,7 @@ namespace Contractor.Container
                 if (time <= MaxFreeTime) return time;
 
                 else return MaxFreeTime;
-            } 
+            }
         }
 
         public static int MaxProductiveTime { get; set; } = eightHours; 

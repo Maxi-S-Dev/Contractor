@@ -47,7 +47,7 @@ namespace Contractor.ViewModel
         public TimerCarouselViewModel() 
         {
             productiveTimer = new RoundProgressBarViewModel(TimerType.Productive);
-            freeTimeTimer = new RoundProgressBarViewModel(TimerType.FreeTimer);
+            freeTimeTimer = new RoundProgressBarViewModel(TimerType.FreeTime);
 
             TimerList = new ObservableCollection<Timer> { new Timer() { Context = productiveTimer }, new Timer() { Context = freeTimeTimer } };
         }

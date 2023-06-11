@@ -5,8 +5,9 @@
              x:Class="Contractor.Components.TimeListView">
 
     <Grid HorizontalOptions="Start" ColumnDefinitions="auto, auto" ColumnSpacing="10">
-        <compontents:RoundProgressBar BindingContext="{Binding FreeTimeTimer}"/>
-        <compontents:RoundProgressBar BindingContext="{Binding ProductiveTimer}" Grid.Column="1"/>
+        <compontents:RoundProgressBar BindingContext="{Binding ProductiveTimer}"/>
+        <compontents:RoundProgressBar BindingContext="{Binding FreeTimeTimer}"
+                                      Grid.Column="1" />
     </Grid>
     
 </ContentView>
