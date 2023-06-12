@@ -28,7 +28,6 @@
                     <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
                 <Grid>
-
                     <Label TextColor="White"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
@@ -37,7 +36,7 @@
                            VerticalTextAlignment="Center">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Start Being " />
+                                <Span Text="{Binding ProductiveButtonText}" />
                                 <Span Text="Productive"
                                       FontAttributes="Bold" />
                             </FormattedString>
@@ -49,27 +48,35 @@
                 </Grid>
             </Border>
 
-            <Grid Grid.Row="1">
-                <Button Background="#7F39FB"
-                        Command="{Binding FreeTimeCommand}"></Button>
-                <Label TextColor="White"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       FontSize="20"
-                       VerticalTextAlignment="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Enjoy your "/>
-                            <Span Text="Free Time"
-                                  FontAttributes="Bold" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                    
-                </Label>
-                
-            </Grid>
-            
-            
+            <Border Grid.Row="1"
+                    Background="#7F39FB">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Grid Grid.Row="1">
+
+                    <Label TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="20"
+                           VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding FreeTimeButtonText}"/>
+                                <Span Text="Free Time"
+                                      FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+
+                    </Label>
+
+                    <Button Background="transparent"
+                            Command="{Binding FreeTimeCommand}"></Button>
+
+                </Grid>
+            </Border>
+
+
         </Grid>
     </Grid>
 

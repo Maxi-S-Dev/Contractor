@@ -12,6 +12,29 @@ namespace Contractor.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
+        private string productiveButtonText = "Start Being ";
+        public string ProductiveButtonText 
+        {
+            get => productiveButtonText;
+            set 
+            {
+                productiveButtonText = value;
+                OnPropertyChanged(nameof(ProductiveButtonText));
+            } 
+        }
+
+        
+        private string freeTimeButtonText = "Start Being ";
+        public string FreeTimeButtonText
+        {
+            get => freeTimeButtonText;
+            set
+            {
+                freeTimeButtonText = value;
+                OnPropertyChanged(nameof(FreeTimeButtonText));
+            }
+        }
+
         TimerCarouselViewModel timerCarouselVm;
         public TimerCarouselViewModel TimerCarouselVm 
         { 
@@ -32,14 +55,31 @@ namespace Contractor.ViewModel
 
             FreeTimeCommand = new Command(() => 
             {
-                Trace.WriteLine("Toggeled");
                 MainTimer.ToggleFreeTime();
+
+                ProductiveButtonText = "Start Being ";
+
+                if (MainTimer.Dispatcher.IsRunning)
+                {
+                    FreeTimeButtonText = "Stop your ";
+                    return;
+                }
+                FreeTimeButtonText = "Start your ";
             });
 
 
             ProductiveTimeCommand = new Command(() =>
             {
                 MainTimer.ToggleProductiveTime();
+
+                FreeTimeButtonText = "Start your ";
+
+                if (MainTimer.Dispatcher.IsRunning) 
+                {
+                    ProductiveButtonText = "Stop Being ";
+                    return;
+                }
+                ProductiveButtonText = "Start Being ";
             });
         }
     }
