@@ -32,5 +32,8 @@ namespace Contractor.Container
         public static int MaxProductiveTime { get; set; } = eightHours; 
 
         public static int MaxFreeTime { get; set; } = eightHours;
+
+        public static void IncreaseProd() => ProdSeconds += 1;
+        public static void DecreaseFree() => FreeSeconds -= 1;
     }
 }

@@ -23,26 +23,35 @@
         
 
         <Grid Grid.Row="2" RowDefinitions="auto, auto" RowSpacing="4">
-            <Grid>
-                <Button Background="#6200EE"></Button>
-                <Label TextColor="White"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       FontSize="20"
-                       FontFamily="RobotoRegular"
-                       VerticalTextAlignment="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Start Being " />
-                            <Span Text="Productive"
-                                  FontAttributes="Bold" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            </Grid>
+            <Border Background="#6200EE">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Grid>
+
+                    <Label TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="20"
+                           FontFamily="RobotoRegular"
+                           VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Start Being " />
+                                <Span Text="Productive"
+                                      FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Button Background="transparent"
+                            Command="{Binding ProductiveTimeCommand}"></Button>
+                </Grid>
+            </Border>
 
             <Grid Grid.Row="1">
-                <Button Background="#7F39FB"></Button>
+                <Button Background="#7F39FB"
+                        Command="{Binding FreeTimeCommand}"></Button>
                 <Label TextColor="White"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"

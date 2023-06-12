@@ -12,8 +12,6 @@ public partial class MainPage : ContentPage
         _mainVm = new MainViewModel();
         BindingContext = _mainVm;
 
-        MainTimer.StartTimer(Enums.TimerType.FreeTime);
-
         if (DeviceInfo.Platform == DevicePlatform.WinUI)
 		{
 			var component = new Components.TimeListView();

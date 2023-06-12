@@ -11,19 +11,64 @@ namespace Contractor.Timers
 {
     public static class MainTimer
     {
+        private static bool firstRun = true;
+        private static TimerType currentTimer = TimerType.Productive;
+
+
         public static IDispatcherTimer Dispatcher = Application.Current.Dispatcher.CreateTimer();
-        public static void StartTimer(TimerType timerType)
+        public static void StartTimer()
         {
-            Dispatcher.Interval = TimeSpan.FromSeconds(1);
+            if (firstRun)
+            {
+                SetUpTimer();
+                firstRun = false;
+            }
+            Dispatcher.Start();
+        }
+
+        private static void SetUpTimer()
+        {
+            Dispatcher.Interval = TimeSpan.FromSeconds(.01);
 
             Dispatcher.Tick += (s, e) =>
             {
-                if (timerType == TimerType.Productive) DataStorage.ProdSeconds++;
-                else DataStorage.FreeSeconds--;
+                if (currentTimer == TimerType.Productive)
+                    DataStorage.IncreaseProd();
+                else
+                    DataStorage.DecreaseFree();
             };
-            Dispatcher.Start();
         }
-        
+
         public static void StopTimer() => Dispatcher.Stop();
+
+        public static void ToggleFreeTime()
+        {
+            if(Dispatcher.IsRunning && currentTimer == TimerType.FreeTime) 
+            {
+                StopTimer();
+                return;
+            }
+
+            if(!Dispatcher.IsRunning || (Dispatcher.IsRunning && currentTimer != TimerType.FreeTime))
+            {
+                StartTimer();
+                currentTimer = TimerType.FreeTime;
+            }
+        }
+
+        public static void ToggleProductiveTime() 
+        {
+            if (Dispatcher.IsRunning && currentTimer == TimerType.Productive)
+            {
+                StopTimer();
+                return;
+            }
+
+            if (!Dispatcher.IsRunning || (Dispatcher.IsRunning && currentTimer != TimerType.Productive))
+            {
+                StartTimer();
+                currentTimer = TimerType.Productive;
+            }
+        }
     }
 }
