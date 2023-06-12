@@ -12,6 +12,7 @@ namespace Contractor.ViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        //Propery Changed Event
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

@@ -2,14 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Contractor.Model;
 
 namespace Contractor.ViewModel
 {
     public class TimerCarouselViewModel : ViewModelBase
     {
+        //View Model for the Productive Timer
         public RoundProgressBarViewModel productiveTimer;
         public RoundProgressBarViewModel ProductiveTimer 
         {
@@ -21,6 +20,7 @@ namespace Contractor.ViewModel
             } 
         }
 
+        //View Model for the FreeTime Timer
         public RoundProgressBarViewModel freeTimeTimer;
         public RoundProgressBarViewModel FreeTimeTimer 
         { get => freeTimeTimer; 
@@ -32,9 +32,10 @@ namespace Contractor.ViewModel
                  
         }
 
-        private ObservableCollection<Timer> timerList;
+        //List used to Display both Timers in the CarouselView
+        private ObservableCollection<Model.Timer> timerList;
 
-        public ObservableCollection<Timer> TimerList
+        public ObservableCollection<Model.Timer> TimerList
         {
             get => timerList;
             set
@@ -44,17 +45,13 @@ namespace Contractor.ViewModel
             }
         }
 
+        //Applys both ViewModels and creates the list
         public TimerCarouselViewModel() 
         {
             productiveTimer = new RoundProgressBarViewModel(TimerType.Productive);
             freeTimeTimer = new RoundProgressBarViewModel(TimerType.FreeTime);
 
-            TimerList = new ObservableCollection<Timer> { new Timer() { Context = productiveTimer }, new Timer() { Context = freeTimeTimer } };
+            TimerList = new ObservableCollection<Model.Timer> { new Model.Timer() { Context = productiveTimer }, new Model.Timer() { Context = freeTimeTimer } };
         }
-    }
-
-    public class Timer
-    {
-        public RoundProgressBarViewModel Context { get; set; }
     }
 }

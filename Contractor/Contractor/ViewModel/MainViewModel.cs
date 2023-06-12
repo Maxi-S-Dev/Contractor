@@ -12,6 +12,7 @@ namespace Contractor.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
+        //First half of the Productive Button Text 
         private string productiveButtonText = "Start Being ";
         public string ProductiveButtonText 
         {
@@ -23,7 +24,7 @@ namespace Contractor.ViewModel
             } 
         }
 
-        
+        //First half of the Free Time Button Text 
         private string freeTimeButtonText = "Start Being ";
         public string FreeTimeButtonText
         {
@@ -49,11 +50,24 @@ namespace Contractor.ViewModel
         public ICommand FreeTimeCommand { get; private set; }
         public ICommand ProductiveTimeCommand { get; private set; }
 
+        /// <summary>
+        /// Creates the View Model for the Carousel/ListView
+        /// </summary>
         public MainViewModel() 
         {
             TimerCarouselVm = new TimerCarouselViewModel();
 
-            FreeTimeCommand = new Command(() => 
+            CreateCommands();
+        }
+
+        /// <summary>
+        /// Creates the Commands for the Buttons
+        /// They Start the Acording Timer
+        /// They update the Text from the Buttons
+        /// </summary>
+        private void CreateCommands()
+        {
+            FreeTimeCommand = new Command(() =>
             {
                 MainTimer.ToggleFreeTime();
 
@@ -74,7 +88,7 @@ namespace Contractor.ViewModel
 
                 FreeTimeButtonText = "Start your ";
 
-                if (MainTimer.Dispatcher.IsRunning) 
+                if (MainTimer.Dispatcher.IsRunning)
                 {
                     ProductiveButtonText = "Stop Being ";
                     return;

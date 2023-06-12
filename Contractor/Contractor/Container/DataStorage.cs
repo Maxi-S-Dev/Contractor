@@ -11,8 +11,17 @@ namespace Contractor.Container
         private const int eightHours = 28800;
 
         public static float Factor = 1.5f;
-        
-        public static int ProdSeconds = eightHours;
+
+        private static int prodSeconds = 0;
+        public static int ProdSeconds
+        {
+            get => prodSeconds;
+            set
+            {
+                ProdSeconds = value;
+            }
+        }
+
         public static int FreeSeconds 
         { 
             set

@@ -5,11 +5,13 @@ using System.Xml;
 using System.Reflection.Metadata;
 using System.Diagnostics;
 using Contractor.Timers;
+using static Android.Icu.Text.TimeZoneFormat;
 
 namespace Contractor.ViewModel
 {
     public class RoundProgressBarViewModel : ViewModelBase
     {
+        //Displayed Time 
         private string time;
         public string Time 
         { 
@@ -22,6 +24,7 @@ namespace Contractor.ViewModel
         
         }
 
+        //Text below Time
         string text;
         public string Text
         {
@@ -35,19 +38,23 @@ namespace Contractor.ViewModel
 
         public ClockDrawable ClockDrawable { get; }
 
-        float tickRate = 0;
-        float degree;
-
+    
+        /// <summary>
+        /// Creates the RoundProgessBar(ClockDrawable)
+        /// </summary>
+        /// <param name="timerType"></param>
         public RoundProgressBarViewModel(TimerType timerType)
         {
             ClockDrawable = new ClockDrawable(timerType);
 
-            CalculateDegrees(timerType);
+            SetTimerTick(timerType);
+        }
 
+        //Updates the UI on every Timer Tick
+        private void SetTimerTick(TimerType timerType)
+        {
             MainTimer.Dispatcher.Tick += (s, e) =>
             {
-                //ClockDrawable.AddDegrees(degree);
-
                 float percent = (DataStorage.ProdSeconds * 100) / DataStorage.MaxProductiveTime;
 
                 ClockDrawable.SetDegreesUsingPercent(percent);
@@ -57,26 +64,7 @@ namespace Contractor.ViewModel
             };
         }
 
-        private void CalculateDegrees(TimerType timerType)
-        {
-            if (timerType == TimerType.Productive)
-            {
-                degree = 360 / DataStorage.MaxProductiveTime;
-                return;
-            }
-        }
-
-        private void CalculateTickRate(TimerType timerType)
-        {
-            if(timerType == TimerType.Productive)
-            { 
-                tickRate = DataStorage.MaxProductiveTime / 720;
-                return;
-            }
-
-            tickRate = DataStorage.MaxFreeTime / 720;
-        }
-
+        //Calculates and Updates the Text shown in the Progressbar
         private void SetTimeText(TimerType timerType)
         {
             int time = 0;
@@ -99,8 +87,6 @@ namespace Contractor.ViewModel
             if (minutes.Length == 1) minutes = "0" + minutes;
 
             Time = $"{hours}:{minutes}";
-        }
-
-        
+        }        
     }
 }

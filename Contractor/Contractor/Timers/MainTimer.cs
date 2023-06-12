@@ -16,6 +16,11 @@ namespace Contractor.Timers
 
 
         public static IDispatcherTimer Dispatcher = Application.Current.Dispatcher.CreateTimer();
+
+        /// <summary>
+        /// Starts the Timer
+        /// If it is the first start it creates the Tick Event to add the seconds
+        /// </summary>
         public static void StartTimer()
         {
             if (firstRun)
@@ -26,6 +31,7 @@ namespace Contractor.Timers
             Dispatcher.Start();
         }
 
+        //Timer Setup
         private static void SetUpTimer()
         {
             Dispatcher.Interval = TimeSpan.FromSeconds(.01);
@@ -39,8 +45,10 @@ namespace Contractor.Timers
             };
         }
 
+        //What it says
         public static void StopTimer() => Dispatcher.Stop();
 
+        //Enables/Disables the FreeTime Timer
         public static void ToggleFreeTime()
         {
             if(Dispatcher.IsRunning && currentTimer == TimerType.FreeTime) 
@@ -56,6 +64,7 @@ namespace Contractor.Timers
             }
         }
 
+        //Enables/Disables the Productive Timer
         public static void ToggleProductiveTime() 
         {
             if (Dispatcher.IsRunning && currentTimer == TimerType.Productive)
