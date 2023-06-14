@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,8 @@ namespace Contractor.Container
     {
         private const int eightHours = 28800;
 
-        public static float Factor = 1.5f;
+
+        public static float Factor = 10f;
 
         private static int prodSeconds = 0;
         public static int ProdSeconds
@@ -18,7 +20,11 @@ namespace Contractor.Container
             get => prodSeconds;
             set
             {
-                ProdSeconds = value;
+                try
+                {
+                    ProdSeconds = value;
+                }
+                catch(Exception ex) { Trace.WriteLine(ex); }
             }
         }
 
@@ -41,6 +47,7 @@ namespace Contractor.Container
         public static int MaxProductiveTime { get; set; } = eightHours; 
 
         public static int MaxFreeTime { get; set; } = eightHours;
+
 
         public static void IncreaseProd() => ProdSeconds += 1;
         public static void DecreaseFree() => FreeSeconds -= 1;

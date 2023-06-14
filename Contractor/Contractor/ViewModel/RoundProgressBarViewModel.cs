@@ -5,7 +5,6 @@ using System.Xml;
 using System.Reflection.Metadata;
 using System.Diagnostics;
 using Contractor.Timers;
-using static Android.Icu.Text.TimeZoneFormat;
 
 namespace Contractor.ViewModel
 {

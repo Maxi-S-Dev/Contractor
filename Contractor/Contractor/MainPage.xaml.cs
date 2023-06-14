@@ -1,4 +1,5 @@
-﻿using Contractor.Timers;
+﻿using Contractor.Container;
+using Contractor.Timers;
 using Contractor.ViewModel;
 
 namespace Contractor;
@@ -11,6 +12,8 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
         _mainVm = new MainViewModel();
         BindingContext = _mainVm;
+
+        SaveData.Load();
 
         if (DeviceInfo.Platform == DevicePlatform.WinUI)
 		{
