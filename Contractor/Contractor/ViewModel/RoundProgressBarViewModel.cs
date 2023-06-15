@@ -1,10 +1,9 @@
 ﻿using Contractor.Drawables;
 using Contractor.Enums;
-using Contractor.Container;
 using System.Xml;
 using System.Reflection.Metadata;
 using System.Diagnostics;
-using Contractor.Timers;
+using Contractor.Utils;
 
 namespace Contractor.ViewModel
 {
@@ -54,7 +53,7 @@ namespace Contractor.ViewModel
         {
             MainTimer.Dispatcher.Tick += (s, e) =>
             {
-                float percent = (DataStorage.ProdSeconds * 100) / DataStorage.MaxProductiveTime;
+                float percent = (DataStore.ProdSeconds * 100) / DataStore.MaxProductiveTime;
 
                 ClockDrawable.SetDegreesUsingPercent(percent);
                 OnPropertyChanged(nameof(ClockDrawable));
@@ -71,12 +70,12 @@ namespace Contractor.ViewModel
             if (timerType == TimerType.Productive)
             {
                 Text = "Time elapsed";
-                time = DataStorage.ProdSeconds;
+                time = DataStore.ProdSeconds;
             }
             else if (timerType == TimerType.FreeTime)
             {
                 Text = "Time remaining";
-                time = DataStorage.FreeSeconds;
+                time = DataStore.FreeSeconds;
             }
 
             string hours = (time / 3600).ToString();

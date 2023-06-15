@@ -26,7 +26,14 @@ public partial class App : Application
 
         Window.Destroying += (s, e) =>
         {
+
+/* Unmerged change from project 'Contractor (net7.0-windows10.0.19041.0)'
+Before:
             Container.SaveData.Save();
+After:
+            SaveData.Save();
+*/
+            Contractor.Utils.SaveData.Save();
         };
 
         return Window;
