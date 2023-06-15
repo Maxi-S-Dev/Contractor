@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:Contractor.Components"
+             xmlns:vm="clr-namespace:Contractor.ViewModel"
+             x:Class="Contractor.View.MainPage"
+             Title=""
+             Background="{AppThemeBinding Dark={DynamicResource DarkBackground}, Light={DynamicResource LightBackground}}">
+
+    <Grid RowDefinitions="Auto, *, Auto"
+          Padding="20"
+          x:Name="MainGrid">
+
+        <Grid RowDefinitions="Auto, Auto">
+            <Label Text="Hey There!"
+                   FontFamily="RobotoBlack"
+                   TextColor="{AppThemeBinding Dark={DynamicResource White}, Light={DynamicResource Black}}"
+                   FontSize="40"/>
+
+            <components:FreeTimeInfoText Grid.Row="1" />
+        </Grid>
+
+        
+
+        <Grid Grid.Row="2" RowDefinitions="auto, auto" RowSpacing="4">
+            <Border Background="#6200EE">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Grid>
+                    <Label TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="20"
+                           FontFamily="RobotoRegular"
+                           VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding ProductiveButtonText}" />
+                                <Span Text="Productive"
+                                      FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Button Background="transparent"
+                            Command="{Binding ProductiveTimeCommand}"></Button>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1"
+                    Background="#7F39FB">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Grid Grid.Row="1">
+
+                    <Label TextColor="White"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="20"
+                           VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding FreeTimeButtonText}"/>
+                                <Span Text="Free Time"
+                                      FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+
+                    </Label>
+
+                    <Button Background="transparent"
+                            Command="{Binding FreeTimeCommand}"></Button>
+
+                </Grid>
+            </Border>
+
+
+        </Grid>
+    </Grid>
+
+</ContentPage>
