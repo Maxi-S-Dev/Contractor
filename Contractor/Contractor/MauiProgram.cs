@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Contractor.Utils;
+using Microsoft.Extensions.Logging;
 
 namespace Contractor;
 
@@ -7,6 +8,9 @@ public static class MauiProgram
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
+
+		builder.Services.AddSingleton<DataStore>();
+
 		builder
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>

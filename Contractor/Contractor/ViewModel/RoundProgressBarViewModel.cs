@@ -19,7 +19,6 @@ namespace Contractor.ViewModel
                 time = value;
                 OnPropertyChanged(nameof(Time));
             }
-        
         }
 
         //Text below Time
@@ -36,7 +35,7 @@ namespace Contractor.ViewModel
 
         public ClockDrawable ClockDrawable { get; }
 
-    
+        DataStore dataStore;
         /// <summary>
         /// Creates the RoundProgessBar(ClockDrawable)
         /// </summary>
@@ -46,6 +45,8 @@ namespace Contractor.ViewModel
             ClockDrawable = new ClockDrawable(timerType);
 
             SetTimerTick(timerType);
+
+            dataStore = Application.Current.Handler.MauiContext.Services.GetService(typeof(DataStore)) as DataStore;
         }
 
         //Updates the UI on every Timer Tick
@@ -53,7 +54,7 @@ namespace Contractor.ViewModel
         {
             MainTimer.Dispatcher.Tick += (s, e) =>
             {
-                float percent = (DataStore.ProdSeconds * 100) / DataStore.MaxProductiveTime;
+                float percent = (dataStore.ProdSeconds * 100) / dataStore.MaxProductiveTime;
 
                 ClockDrawable.SetDegreesUsingPercent(percent);
                 OnPropertyChanged(nameof(ClockDrawable));
@@ -70,12 +71,12 @@ namespace Contractor.ViewModel
             if (timerType == TimerType.Productive)
             {
                 Text = "Time elapsed";
-                time = DataStore.ProdSeconds;
+                time = dataStore.ProdSeconds;
             }
             else if (timerType == TimerType.FreeTime)
             {
                 Text = "Time remaining";
-                time = DataStore.FreeSeconds;
+                time = dataStore.FreeSeconds;
             }
 
             string hours = (time / 3600).ToString();

@@ -15,6 +15,7 @@ namespace Contractor.Utils
 
 
         public static IDispatcherTimer Dispatcher = Application.Current.Dispatcher.CreateTimer();
+        static DataStore dataStore = Application.Current.Handler.MauiContext.Services.GetService(typeof(DataStore)) as DataStore; 
 
         /// <summary>
         /// Starts the Timer
@@ -38,9 +39,9 @@ namespace Contractor.Utils
             Dispatcher.Tick += (s, e) =>
             {
                 if (currentTimer == TimerType.Productive)
-                    DataStore.IncreaseProd();
+                    dataStore.IncreaseProd();
                 else
-                    DataStore.DecreaseFree();
+                    dataStore.DecreaseFree();
             };
         }
 
