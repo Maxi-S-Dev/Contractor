@@ -33,7 +33,7 @@ Before:
 After:
             SaveData.Save();
 */
-            Contractor.Utils.SaveData.Save();
+            Contractor.Services.DataSaver.Save();
         };
 
         return Window;

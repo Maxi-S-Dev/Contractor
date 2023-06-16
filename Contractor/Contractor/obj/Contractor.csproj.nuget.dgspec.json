@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\github\\Contractor\\Contractor\\Contractor\\Contractor.csproj": {}
+    "C:\\GitHub\\Contractor\\Contractor\\Contractor\\Contractor.csproj": {}
   },
   "projects": {
-    "D:\\github\\Contractor\\Contractor\\Contractor\\Contractor.csproj": {
+    "C:\\GitHub\\Contractor\\Contractor\\Contractor\\Contractor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\github\\Contractor\\Contractor\\Contractor\\Contractor.csproj",
+        "projectUniqueName": "C:\\GitHub\\Contractor\\Contractor\\Contractor\\Contractor.csproj",
         "projectName": "Contractor",
-        "projectPath": "D:\\github\\Contractor\\Contractor\\Contractor\\Contractor.csproj",
+        "projectPath": "C:\\GitHub\\Contractor\\Contractor\\Contractor\\Contractor.csproj",
         "packagesPath": "C:\\Users\\max03\\.nuget\\packages\\",
-        "outputPath": "D:\\github\\Contractor\\Contractor\\Contractor\\obj\\",
+        "outputPath": "C:\\GitHub\\Contractor\\Contractor\\Contractor\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

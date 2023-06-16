@@ -1,4 +1,4 @@
-﻿using Contractor.Utils;
+﻿using Contractor.Services;
 using Contractor.ViewModel;
 
 namespace Contractor.View;
@@ -12,7 +12,7 @@ public partial class MainPage : ContentPage
         _mainVm = new MainViewModel();
         BindingContext = _mainVm;
 
-        SaveData.Load();
+        DataSaver.Load();
 
         if (DeviceInfo.Platform == DevicePlatform.WinUI)
 		{

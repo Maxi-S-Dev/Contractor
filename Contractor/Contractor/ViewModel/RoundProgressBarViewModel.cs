@@ -4,6 +4,7 @@ using System.Xml;
 using System.Reflection.Metadata;
 using System.Diagnostics;
 using Contractor.Utils;
+using Contractor.Services;
 
 namespace Contractor.ViewModel
 {
@@ -54,7 +55,9 @@ namespace Contractor.ViewModel
         {
             MainTimer.Dispatcher.Tick += (s, e) =>
             {
-                float percent = (dataStore.ProdSeconds * 100) / dataStore.MaxProductiveTime;
+                float percent = timerType == TimerType.Productive ? (dataStore.ProdSeconds * 100) / dataStore.MaxProductiveTime : (dataStore.FreeSeconds * 100) / dataStore.MaxFreeTime;
+
+                //(dataStore.ProdSeconds * 100) / dataStore.MaxProductiveTime;
 
                 ClockDrawable.SetDegreesUsingPercent(percent);
                 OnPropertyChanged(nameof(ClockDrawable));
@@ -76,7 +79,7 @@ namespace Contractor.ViewModel
             else if (timerType == TimerType.FreeTime)
             {
                 Text = "Time remaining";
-                time = dataStore.FreeSeconds;
+                time = (int)dataStore.FreeSeconds;
             }
 
             string hours = (time / 3600).ToString();

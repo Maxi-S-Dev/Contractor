@@ -12,8 +12,6 @@ namespace Contractor.Interfaces
 
         public  int ProdSeconds { get; set; }
         
-        public  int FreeSeconds { get; }
-
         public  int MaxProductiveTime { get; set; }
 
         public int MaxFreeTime { get; set; }
