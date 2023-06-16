@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Contractor.Model
 {
-    internal class SaveDataModel : IAppData
+    public class SaveDataModel : IAppData
     {
         public float Factor { get; set; }
         public int ProdSeconds { get; set; }

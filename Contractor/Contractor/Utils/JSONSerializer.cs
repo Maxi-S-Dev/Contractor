@@ -14,7 +14,7 @@ namespace Contractor.Utils
 
         internal static SaveDataModel JSONToSaveData(string jsonString)
         {
-            SaveDataModel saveData= JsonSerializer.Deserialize<SaveDataModel>(jsonString);
+            SaveDataModel saveData = JsonSerializer.Deserialize<SaveDataModel>(jsonString);
 
             return saveData;
         }

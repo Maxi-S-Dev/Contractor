@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Contractor.Interfaces;
+using System.Diagnostics;
 
-namespace Contractor.Services
+namespace Contractor.Utils
 {
     public static class DataSaver
     {
@@ -14,24 +15,40 @@ namespace Contractor.Services
         static string fileName = "AppData.json";
 
         public static void Load()
-        {
-            string path = Path.Combine(directoryPath, fileName);
-            //DataStore.MaxFreeTime = Preferences.Get("MaxFreeTime", 6);
-            //DataStore.MaxProductiveTime = Preferences.Get("MaxProductiveTime", 8);
-            ////DataStore.Factor = (float)Preferences.Get("Factor", 1.75);
-            //DataStore.ProdSeconds = Preferences.Get("ProdSeconds", 0);
+        { 
 
-            if (File.Exists(path))
+            string path = Path.Combine(directoryPath, fileName);
+
+            //File.Delete(path);
+
+            if (!File.Exists(path))
             {
-                File.ReadAllText(Path.Combine(directoryPath, fileName));
+                File.Create(path);
                 return;
             }
 
-            File.Create(path);
+            string json = File.ReadAllText(path);
+
+            var saveData = JSONSerializer.JSONToSaveData(json);
+
+            Trace.WriteLine("should run mapper");
+            Mapper.SaveDataToAppData(saveData);
+
         }
 
         public static void Save()
         {
+            Trace.WriteLine("saving");
+
+
+            string path = Path.Combine(directoryPath, fileName);
+
+            var saveData = Mapper.AppDataToSaveData();
+
+            string json = JSONSerializer.SaveDataToJSON(saveData);
+
+            File.WriteAllText(path, json);
+
 
             //Preferences.Set("MaxFreeTime", DataStore.MaxFreeTime);
             //Preferences.Set("MaxProductiveTime", DataStore.MaxProductiveTime);

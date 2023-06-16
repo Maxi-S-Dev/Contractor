@@ -56,7 +56,7 @@ namespace Contractor.ViewModel
         public MainViewModel() 
         {
             TimerCarouselVm = new TimerCarouselViewModel();
-
+            DataSaver.Load();
             CreateCommands();
         }
 
