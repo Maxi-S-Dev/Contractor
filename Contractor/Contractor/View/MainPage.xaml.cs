@@ -1,5 +1,5 @@
 ﻿using Contractor.ViewModel;
-
+using System.Diagnostics;
 namespace Contractor.View;
 
 public partial class MainPage : ContentPage
@@ -18,7 +18,8 @@ public partial class MainPage : ContentPage
 			component.VerticalOptions = LayoutOptions.Center;
             component.BindingContext = _mainVm.TimerCarouselVm;
 
-            MainGrid.Add(component, 0, 1);
+            ProgressbarGrid.Add(component);
+
 		}
 
         else if (DeviceInfo.Platform == DevicePlatform.Android)
@@ -28,8 +29,13 @@ public partial class MainPage : ContentPage
             component.VerticalOptions = LayoutOptions.Center;
             component.BindingContext = _mainVm.TimerCarouselVm;
 
-            MainGrid.Add(component, 0, 1);
+            ProgressbarGrid.Add(component);
         }
+    }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        Trace.WriteLine("clicked");
     }
 }
 
