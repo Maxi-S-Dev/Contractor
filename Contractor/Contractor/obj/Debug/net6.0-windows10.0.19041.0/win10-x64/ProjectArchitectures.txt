@@ -1,0 +1,1 @@
+C:\GitHub\Contractor\Contractor\Contractor\Contractor.csproj;x64

@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9</PackageIdentityName>
-    <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Majost</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\GitHub\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -19,36 +19,36 @@
     <WindowsSdkPath>
     </WindowsSdkPath>
     <LayoutDir>C:\GitHub\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>247BFE53BC9F1D90BBD0884E369D2A75E28819F6E99EE129F2182C4006B2835A</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_9zz4h110yvjzm!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>E98D28B3797A417F745812E6DF1925AFDC735DF967E2BAD90238910C842FE8E3</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_0.0.2.0_x64__e92ds6ex86fsr</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_e92ds6ex86fsr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=User Name</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.1</RegisteredVersion>
+    <RegisteredPackagePublisher>CN=Majost</RegisteredPackagePublisher>
+    <RegisteredVersion>0.0.2.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\GitHub\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-16T17:27:37.922</Modified>
+      <Modified>2023-06-17T09:37:39.124</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\GitHub\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-06-16T17:27:37.270</Modified>
+      <Modified>2023-06-17T09:37:38.521</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitHub\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Contractor.runtimeconfig.json">
       <PackagePath>Contractor.runtimeconfig.json</PackagePath>
-      <Modified>2023-06-15T17:20:22.382</Modified>
+      <Modified>2023-06-17T09:36:36.154</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitHub\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Contractor.dll">
       <PackagePath>Contractor.dll</PackagePath>
-      <Modified>2023-06-16T17:27:35.348</Modified>
+      <Modified>2023-06-17T09:37:36.080</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitHub\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Contractor.exe</PackagePath>
-      <Modified>2023-06-16T17:27:35.370</Modified>
+      <Modified>2023-06-17T09:37:36.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\max03\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.7\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -920,7 +920,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitHub\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Contractor.deps.json">
       <PackagePath>Contractor.deps.json</PackagePath>
-      <Modified>2023-06-16T17:27:37.607</Modified>
+      <Modified>2023-06-17T09:37:38.842</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
