@@ -19,6 +19,7 @@ namespace Contractor.ViewModel
             {
                 time = value;
                 OnPropertyChanged(nameof(Time));
+                OnPropertyChanged(nameof(LoadingText));
             }
         }
 
@@ -31,6 +32,21 @@ namespace Contractor.ViewModel
             {
                 text = value;
                 OnPropertyChanged(nameof(Text));
+            }
+        }
+
+        public string LoadingText
+        {
+            get
+            {
+                if(string.IsNullOrEmpty(Time))
+                {
+                    return "Loading ...";
+                }
+                else
+                {
+                    return "";
+                }
             }
         }
 
@@ -48,6 +64,8 @@ namespace Contractor.ViewModel
             SetTimerTick(timerType);
 
             dataStore = Application.Current.Handler.MauiContext.Services.GetService(typeof(DataStore)) as DataStore;
+
+            SetTimeText(timerType);
         }
 
         //Updates the UI on every Timer Tick

@@ -7,6 +7,10 @@
         <Style TargetType="Label">
             <Setter Property="TextColor"
                     Value="{AppThemeBinding Dark={DynamicResource White}, Light={DynamicResource Black}}" />
+            <Setter Property="HorizontalOptions"
+                    Value="Center" />
+            <Setter Property="HorizontalTextAlignment"
+                    Value="Center" />
         </Style>
     </ContentView.Resources>
     
@@ -22,16 +26,27 @@
               VerticalOptions="Center"
               RowDefinitions="auto, auto"
               RowSpacing="-6">
+
+            <Label FontSize="20"
+                   FontFamily="RobotoRegular"
+                   Grid.RowSpan="2"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="{Binding LoadingText, Mode=OneWay}">
+
+            </Label>
+
+
             <Label Text="{Binding Time}"
                    FontFamily="RobotoRegular"
                    FontSize="45"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+                   VerticalOptions="Center"
+                   x:Name="TimeLabel"/>
 
             <Label Text="{Binding Text}"
                    FontFamily="RobotoRegular"
                    FontSize="18"
-                   HorizontalOptions="Center"
                    VerticalOptions="Center" 
                    Grid.Row="1"/>
         </Grid>

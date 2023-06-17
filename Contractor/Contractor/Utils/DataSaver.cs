@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Contractor.Interfaces;
 using System.Diagnostics;
+using System.ComponentModel;
 
 namespace Contractor.Utils
 {
@@ -16,7 +17,6 @@ namespace Contractor.Utils
 
         public static void Load()
         { 
-
             string path = Path.Combine(directoryPath, fileName);
 
             if (!File.Exists(path))
@@ -32,7 +32,6 @@ namespace Contractor.Utils
             var saveData = JSONSerializer.JSONToSaveData(json);
 
             Mapper.SaveDataToAppData(saveData);
-
         }
 
         public static void Save()

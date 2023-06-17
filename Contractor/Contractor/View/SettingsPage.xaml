@@ -2,17 +2,85 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Contractor.View.SettingsPage"
-             Title="SettingsPage">
+             Title="">
 
-    <Shell.BackButtonBehavior >
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize"
+                    Value="18" />
+            <Setter Property="FontFamily"
+                    Value="RobotoRegular" />
+            <Setter Property="VerticalOptions"
+                    Value="Center" />
+            <Setter Property="VerticalTextAlignment"
+                    Value="Center" />
+            <Setter Property="Grid.Column"
+                    Value="1" />
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="WidthRequest"
+                    Value="60" />
+            <Setter Property="MinimumHeightRequest"
+                    Value="30" />
+            <Setter Property="Grid.Column"
+                    Value="2" />
+            <Setter Property="FontSize"
+                    Value="14" />
+            <Setter Property="Background"
+                    Value="#1e1e1e" />
+            <Setter Property="VerticalOptions"
+                    Value="Center" />
+            <Setter Property="VerticalTextAlignment"
+                    Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Shell.BackButtonBehavior>
         <BackButtonBehavior IsVisible="True"
                             IsEnabled="True" />
     </Shell.BackButtonBehavior>
-    
-    <VerticalStackLayout>
-        <Label 
-            Text="Settings"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid RowDefinitions="auto, auto, *" RowSpacing="0">
+        <Grid Grid.Row="0" HeightRequest="60"
+              ColumnDefinitions="auto, *, auto" Margin="10, 0"
+              ColumnSpacing="5" >
+
+
+            <Label Text="Maximal Productive Time per Day"/>
+
+            <Entry/>
+        </Grid>
+
+
+        <Grid Grid.Row="1" 
+              HeightRequest="60"
+              ColumnDefinitions="auto, *, auto"
+              Margin="10"
+              ColumnSpacing="10">
+
+
+            <Label Text="Maximal Free Time per Day"
+                   Grid.Column="1" />
+
+            <Entry Grid.Column="2"
+                   WidthRequest="60"
+                   MaximumHeightRequest="10"
+                   FontSize="14"
+                   Background="#1e1e1e" />
+        </Grid>
+    </Grid>
 </ContentPage>
+    
+    <!--
+        LightMode/Darkmode/System
+        MaxFreeTime
+        MaxProductiveTime
+        Factor
+        Transfre Free Time To next Day
+        
+        Premium: 
+            Custom Colors
+            
+            
+        -->
