@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace Contractor;
+﻿namespace Contractor;
 
 public partial class App : Application
 {
@@ -19,9 +17,9 @@ public partial class App : Application
 
         if(DeviceInfo.Platform == DevicePlatform.WinUI)
         {
-            //Window.Width= 505;
+            Window.Width= 505;
 
-            //Window.Height = 700;
+            Window.Height = 700;
         }
 
         Window.Destroying += (s, e) =>

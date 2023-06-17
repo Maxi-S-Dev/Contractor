@@ -19,8 +19,6 @@ namespace Contractor.Utils
 
             string path = Path.Combine(directoryPath, fileName);
 
-            //File.Delete(path);
-
             if (!File.Exists(path))
             {
                 File.Create(path);
@@ -29,18 +27,16 @@ namespace Contractor.Utils
 
             string json = File.ReadAllText(path);
 
+            if (string.IsNullOrEmpty(json)) return;
+
             var saveData = JSONSerializer.JSONToSaveData(json);
 
-            Trace.WriteLine("should run mapper");
             Mapper.SaveDataToAppData(saveData);
 
         }
 
         public static void Save()
         {
-            Trace.WriteLine("saving");
-
-
             string path = Path.Combine(directoryPath, fileName);
 
             var saveData = Mapper.AppDataToSaveData();

@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="5dede3a1-f99a-40e1-9cad-c0e4015ac9c9" Publisher="CN=Majost" Version="0.0.11.0" ProcessorArchitecture="x64" />
+  <Identity Name="5dede3a1-f99a-40e1-9cad-c0e4015ac9c9" Publisher="CN=Majost" Version="0.0.12.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="24F9F26A-AB76-4B45-BFFA-ACB08309A888" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Contractor</DisplayName>

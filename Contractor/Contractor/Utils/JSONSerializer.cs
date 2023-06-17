@@ -14,6 +14,7 @@ namespace Contractor.Utils
 
         internal static SaveDataModel JSONToSaveData(string jsonString)
         {
+            if(string.IsNullOrEmpty(jsonString)) return null;
             SaveDataModel saveData = JsonSerializer.Deserialize<SaveDataModel>(jsonString);
 
             return saveData;

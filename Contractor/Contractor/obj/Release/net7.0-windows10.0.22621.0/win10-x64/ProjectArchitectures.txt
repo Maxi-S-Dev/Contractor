@@ -1,1 +1,1 @@
-C:\GitHub\Contractor\Contractor\Contractor\Contractor.csproj;x64
+D:\github\Contractor\Contractor\Contractor\Contractor.csproj;x64
