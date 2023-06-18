@@ -1,4 +1,5 @@
-﻿using Contractor.Services;
+﻿using Contractor.Enums;
+using Contractor.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,6 +56,48 @@ namespace Contractor.ViewModel
             }
         }
 
+        public List<Design> DesignStates { get { return Enum.GetValues(typeof(Design)).OfType<Design>().ToList(); } }
+
+        public Design CurrentDesign
+        {
+            get 
+            {
+                switch (Application.Current.UserAppTheme)
+                {
+                    case AppTheme.Dark:
+                        return Design.Dark;
+
+                    case AppTheme.Light:
+                        return Design.Light;
+
+                    case AppTheme.Unspecified:
+                        return Design.Default;
+
+                    default:
+                        return Design.Default;
+                }
+            }
+            set
+            {
+                switch(value)
+                {
+                    case Design.Default:
+                        Application.Current.UserAppTheme = AppTheme.Unspecified;
+                        Preferences.Set("theme", Design.Default.ToString());
+                        break;
+
+                    case Design.Light:
+                        Application.Current.UserAppTheme = AppTheme.Light;
+                        Preferences.Set("theme", Design.Light.ToString());
+                        break;
+
+                    case Design.Dark:
+                        Application.Current.UserAppTheme = AppTheme.Dark;
+                        Preferences.Set("theme", Design.Dark.ToString());
+                        break;
+                }
+            }
+        }
         public SettingsViewModel() { }
     }
 }

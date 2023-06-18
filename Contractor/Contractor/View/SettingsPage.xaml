@@ -134,15 +134,13 @@
             <Label Text="Light/Dark Mode"
                    />
 
-            <Picker Grid.Column="2" MinimumHeightRequest="40" MinimumWidthRequest="120" VerticalOptions="Center" Background="#1e1e1e">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Light Mode</x:String>
-                        <x:String>Dark Mode</x:String>
-                        <x:String>System Default</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
+            <Picker Grid.Column="2"
+                    MinimumHeightRequest="40"
+                    MinimumWidthRequest="120"
+                    VerticalOptions="Center"
+                    Background="#1e1e1e"
+                    ItemsSource="{Binding DesignStates}"
+                    SelectedItem="{Binding CurrentDesign}"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

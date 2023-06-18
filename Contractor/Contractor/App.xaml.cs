@@ -1,4 +1,6 @@
-﻿namespace Contractor;
+﻿using Contractor.Enums;
+
+namespace Contractor;
 
 public partial class App : Application
 {
@@ -7,6 +9,22 @@ public partial class App : Application
 		InitializeComponent();
 
 		MainPage = new AppShell();
+
+        string wantedDesign = Preferences.Get("theme", Design.Default.ToString());
+
+        if(wantedDesign == Design.Default.ToString())
+        {
+            Application.Current.UserAppTheme = AppTheme.Unspecified;
+        }
+        else if (wantedDesign == Design.Light.ToString())
+        {
+            Application.Current.UserAppTheme = AppTheme.Light;
+        }
+        else if (wantedDesign == Design.Dark.ToString()) 
+        {
+            Application.Current.UserAppTheme = AppTheme.Dark;
+        }
+
 
 		Shell.Current.GoToAsync("//MainPage");
 	}
