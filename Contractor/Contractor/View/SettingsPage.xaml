@@ -2,7 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Contractor.View.SettingsPage"
+             xmlns:viewmodel="clr-namespace:Contractor.ViewModel"
              Title="">
+
+    <ContentPage.BindingContext>
+        <viewmodel:SettingsViewModel/>
+    </ContentPage.BindingContext>
 
     <ContentPage.Resources>
         <Style TargetType="Label">
@@ -79,7 +84,7 @@
 
             <Label Text="Maximum Productive Time per Day"/>
 
-            <Entry Text="8h"/>
+            <Entry Text="{Binding MaxProdTime}"/>
         </Grid>
 
         <!-- Max Free Time-->
@@ -88,7 +93,7 @@
 
             <Label Text="Maximum Free Time per Day"/>
 
-            <Entry Text="8h"/>
+            <Entry Text="{Binding MaxFreeTime}"/>
         </Grid>
 
         <!-- Factor -->
@@ -97,7 +102,7 @@
 
             <Label Text="Factor between Productive and Free Time"/>
 
-            <Entry Text="0.5"/>
+            <Entry Text="{Binding Factor}"/>
         </Grid>
 
         <!-- Carry Free Time Over -->

@@ -19,6 +19,8 @@ namespace Contractor.Utils
         { 
             string path = Path.Combine(directoryPath, fileName);
 
+            //File.Delete(path);
+
             if (!File.Exists(path))
             {
                 File.Create(path);
