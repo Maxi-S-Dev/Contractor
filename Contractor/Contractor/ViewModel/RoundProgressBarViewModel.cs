@@ -92,7 +92,7 @@ namespace Contractor.ViewModel
             if (timerType == TimerType.Productive)
             {
                 Text = "Time elapsed";
-                time = dataStore.ProdSeconds;
+                time = (int)dataStore.ProdSeconds;
             }
             else if (timerType == TimerType.FreeTime)
             {

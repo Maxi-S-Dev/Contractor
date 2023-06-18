@@ -8,8 +8,8 @@ namespace Contractor.Services
 
         public float Factor { get; set; } = .5f;
 
-        private int prodSeconds = 0;
-        public int ProdSeconds
+        private float prodSeconds = 0;
+        public float ProdSeconds
         {
             get => prodSeconds;
             set
