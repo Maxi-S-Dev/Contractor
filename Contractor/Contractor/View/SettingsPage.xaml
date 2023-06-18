@@ -18,11 +18,25 @@
                     Value="1" />
         </Style>
 
+        <Style TargetType="Label" 
+               x:Key="Heading">
+            <Setter Property="FontSize" 
+                    Value="30"/>
+            <Setter Property="FontFamily" 
+                    Value="RobotoBlack"/>
+            <Setter Property="FontAttributes" 
+                    Value="Bold"/>
+            <Setter Property="Margin" 
+                    Value="0, 10"/>
+            <Setter Property="TextColor" 
+                    Value="{AppThemeBinding Dark={DynamicResource White}, Light={DynamicResource Black}}"/>
+        </Style>
+
         <Style TargetType="Entry">
             <Setter Property="WidthRequest"
-                    Value="60" />
-            <Setter Property="MinimumHeightRequest"
                     Value="30" />
+            <Setter Property="MinimumHeightRequest"
+                    Value="18" />
             <Setter Property="Grid.Column"
                     Value="2" />
             <Setter Property="FontSize"
@@ -33,6 +47,19 @@
                     Value="Center" />
             <Setter Property="VerticalTextAlignment"
                     Value="Center" />
+            <Setter Property="HorizontalTextAlignment" 
+                    Value="Center"/>
+        </Style>
+
+        <Style TargetType="Grid" x:Key="OptionContainer">
+            <Setter Property="Margin" 
+                    Value="10, 0"/>
+            <Setter Property="HeightRequest" 
+                    Value="60"/>
+            <Setter Property="ColumnDefinitions" 
+                    Value="auto, *, auto"/>
+            <Setter Property="ColumnSpacing" 
+                    Value="5"/>
         </Style>
     </ContentPage.Resources>
 
@@ -41,43 +68,82 @@
                             IsEnabled="True" />
     </Shell.BackButtonBehavior>
 
-    <Grid RowDefinitions="auto, auto, *" RowSpacing="0">
-        <Grid Grid.Row="0" HeightRequest="60"
-              ColumnDefinitions="auto, *, auto" Margin="10, 0"
-              ColumnSpacing="5" >
+    <VerticalStackLayout Padding="20">
 
+        <Label Text="General Settings"
+               Style="{StaticResource Heading}"/>
 
-            <Label Text="Maximal Productive Time per Day"/>
-
-            <Entry/>
-        </Grid>
-
-
+        <!-- Max Free Time-->
         <Grid Grid.Row="1" 
-              HeightRequest="60"
-              ColumnDefinitions="auto, *, auto"
-              Margin="10"
-              ColumnSpacing="10">
+              Style="{StaticResource OptionContainer}">
 
+            <Label Text="Maximum Productive Time per Day"/>
 
-            <Label Text="Maximal Free Time per Day"
-                   Grid.Column="1" />
-
-            <Entry Grid.Column="2"
-                   WidthRequest="60"
-                   MaximumHeightRequest="10"
-                   FontSize="14"
-                   Background="#1e1e1e" />
+            <Entry Text="8h"/>
         </Grid>
-    </Grid>
+
+        <!-- Max Free Time-->
+        <Grid Grid.Row="2" 
+              Style="{StaticResource OptionContainer}">
+
+            <Label Text="Maximum Free Time per Day"/>
+
+            <Entry Text="8h"/>
+        </Grid>
+
+        <!-- Factor -->
+        <Grid Grid.Row="3" 
+              Style="{StaticResource OptionContainer}">
+
+            <Label Text="Factor between Productive and Free Time"/>
+
+            <Entry Text="0.5"/>
+        </Grid>
+
+        <!-- Carry Free Time Over -->
+        <Grid Grid.Row="4" 
+              Style="{StaticResource OptionContainer}">
+
+            <Label Text="Reset Free Time every day"/>
+
+            <Switch IsToggled="False" Grid.Column="2"
+                    MaximumWidthRequest="50" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+        </Grid>
+
+        <!--Stroke-->
+        <Path Stroke="white" Data="M 0,0 L 1000,0" 
+              Grid.Row="5" 
+              HeightRequest="5" 
+              StrokeThickness=".5" 
+              Margin="5"/>
+
+        <Label Text="Appearance" 
+               Style="{StaticResource Heading}"/>
+        
+        <!-- Design -->
+        <Grid Grid.Row="7" 
+              Style="{StaticResource OptionContainer}">
+
+            <Label Text="Light/Dark Mode"
+                   />
+
+            <Picker Grid.Column="2" MinimumHeightRequest="40" MinimumWidthRequest="120" VerticalOptions="Center" Background="#1e1e1e">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Light Mode</x:String>
+                        <x:String>Dark Mode</x:String>
+                        <x:String>System Default</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Grid>
+    </VerticalStackLayout>
 </ContentPage>
     
     <!--
         LightMode/Darkmode/System
-        MaxFreeTime
-        MaxProductiveTime
-        Factor
-        Transfre Free Time To next Day
         
         Premium: 
             Custom Colors

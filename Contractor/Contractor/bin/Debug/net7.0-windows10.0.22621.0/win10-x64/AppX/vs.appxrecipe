@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>MAXIDESKTOP</Machine>
+    <Machine>MX-SURFBOOK</Machine>
     <WindowsUser>max03</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetOsVersion>0.0</TargetOsVersion>
@@ -11,16 +11,15 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9</PackageIdentityName>
     <PackageIdentityPublisher>CN=max03</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
-    <WindowsSdkPath>
-    </WindowsSdkPath>
-    <LayoutDir>D:\github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>FCF37991D42BEB08FDA747A5788A90CAC6CB2A8997B2E564D14EDBB6F7E7F41A</RegisteredManifestChecksum>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\AppX</LayoutDir>
+    <RegisteredManifestChecksum>0E941C00FFB67074BAD6A906EDC222DC5EE0D2C8EE8EDE1F5A89AA5C485E6DE5</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_0.0.12.0_x64__05sy6bk4xnnf2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_05sy6bk4xnnf2!App</RegisteredUserModeAppID>
     <RegisteredPackageID>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9</RegisteredPackageID>
@@ -28,28 +27,28 @@
     <RegisteredVersion>0.0.12.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-17T21:20:26.830</Modified>
+      <Modified>2023-06-18T17:55:03.128</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-06-17T21:20:26.638</Modified>
+      <Modified>2023-06-18T17:55:02.647</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\Contractor.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\Contractor.runtimeconfig.json">
       <PackagePath>Contractor.runtimeconfig.json</PackagePath>
-      <Modified>2023-06-17T14:39:42.732</Modified>
+      <Modified>2023-06-18T07:39:53.349</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\Contractor.dll">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\Contractor.dll">
       <PackagePath>Contractor.dll</PackagePath>
-      <Modified>2023-06-17T21:20:26.073</Modified>
+      <Modified>2023-06-18T17:55:01.478</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\apphost.exe">
       <PackagePath>Contractor.exe</PackagePath>
-      <Modified>2023-06-17T21:20:26.082</Modified>
+      <Modified>2023-06-18T17:55:01.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\max03\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.7\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -919,9 +918,9 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-11-08T19:31:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\Contractor.deps.json">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\Contractor.deps.json">
       <PackagePath>Contractor.deps.json</PackagePath>
-      <Modified>2023-06-17T21:20:26.759</Modified>
+      <Modified>2023-06-18T17:55:02.967</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -935,281 +934,281 @@
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2023-04-25T14:26:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2023-06-03T13:28:44.387</Modified>
+      <Modified>2023-06-18T07:29:25.817</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.524</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.524</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.524</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.525</Modified>
+      <Modified>2023-06-18T07:29:55.765</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.527</Modified>
+      <Modified>2023-06-18T07:29:55.765</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Black.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Black.ttf">
       <PackagePath>Roboto-Black.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.488</Modified>
+      <Modified>2023-06-18T07:29:55.686</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-BlackItalic.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-BlackItalic.ttf">
       <PackagePath>Roboto-BlackItalic.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.489</Modified>
+      <Modified>2023-06-18T07:29:55.702</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Bold.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Bold.ttf">
       <PackagePath>Roboto-Bold.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.492</Modified>
+      <Modified>2023-06-18T07:29:55.702</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-BoldItalic.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-BoldItalic.ttf">
       <PackagePath>Roboto-BoldItalic.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.494</Modified>
+      <Modified>2023-06-18T07:29:55.702</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Italic.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Italic.ttf">
       <PackagePath>Roboto-Italic.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.495</Modified>
+      <Modified>2023-06-18T07:29:55.702</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Light.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Light.ttf">
       <PackagePath>Roboto-Light.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.497</Modified>
+      <Modified>2023-06-18T07:29:55.702</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-LightItalic.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-LightItalic.ttf">
       <PackagePath>Roboto-LightItalic.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.499</Modified>
+      <Modified>2023-06-18T07:29:55.718</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Medium.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Medium.ttf">
       <PackagePath>Roboto-Medium.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.501</Modified>
+      <Modified>2023-06-18T07:29:55.718</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-MediumItalic.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-MediumItalic.ttf">
       <PackagePath>Roboto-MediumItalic.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.502</Modified>
+      <Modified>2023-06-18T07:29:55.718</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Regular.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Regular.ttf">
       <PackagePath>Roboto-Regular.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.504</Modified>
+      <Modified>2023-06-18T07:29:55.718</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Thin.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Thin.ttf">
       <PackagePath>Roboto-Thin.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.508</Modified>
+      <Modified>2023-06-18T07:29:55.718</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-ThinItalic.ttf">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-ThinItalic.ttf">
       <PackagePath>Roboto-ThinItalic.ttf</PackagePath>
-      <Modified>2023-06-17T14:34:38.510</Modified>
+      <Modified>2023-06-18T07:29:55.718</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-06-17T14:34:38.510</Modified>
+      <Modified>2023-06-18T07:29:55.718</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.511</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.511</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.511</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.511</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.512</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.512</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.513</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.513</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.513</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.513</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.514</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.514</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.514</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.514</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.514</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.514</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.514</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.515</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.515</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.515</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.515</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.515</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.516</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.516</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.516</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.516</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.517</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.517</Modified>
+      <Modified>2023-06-18T07:29:55.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.517</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.517</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.518</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.518</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.518</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.518</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.519</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.519</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.519</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.519</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.519</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.520</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.520</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.520</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.521</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.521</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.521</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.522</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.522</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.522</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.523</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-06-17T14:34:38.523</Modified>
+      <Modified>2023-06-18T07:29:55.749</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

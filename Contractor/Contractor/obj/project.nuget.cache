@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8B7FglmFB0df35naIxjz68v5fxK8UuTJ7jisTpfCWuW/wy509rCJBULsj6ceSB9wxPmuVgV/LPcVxbaU5dx/8Q==",
+  "dgSpecHash": "BimDTCKUCUE0xVkEZAltRe1Gp0QRXlNgjAd2Y33DufaDBjQfAbcFer7ZL2t+9rmCVok9Dxlcf3uFGbEPV35dmQ==",
   "success": true,
-  "projectFilePath": "D:\\github\\Contractor\\Contractor\\Contractor\\Contractor.csproj",
+  "projectFilePath": "C:\\Github\\Contractor\\Contractor\\Contractor\\Contractor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\max03\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\max03\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",

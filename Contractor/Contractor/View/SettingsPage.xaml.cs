@@ -1,10 +1,10 @@
-namespace Contractor.View;
+using Microsoft.Maui.Handlers;
 
-[XamlCompilation(XamlCompilationOptions.Skip)]
+namespace Contractor.View;
 public partial class SettingsPage : ContentPage
 {
 	public SettingsPage()
 	{
 		InitializeComponent();
-	}
+	}	
 }
