@@ -21,6 +21,8 @@
                     Value="Center" />
             <Setter Property="Grid.Column"
                     Value="1" />
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"/>
         </Style>
 
         <Style TargetType="Label" 
@@ -33,8 +35,8 @@
                     Value="Bold"/>
             <Setter Property="Margin" 
                     Value="0, 10"/>
-            <Setter Property="TextColor" 
-                    Value="{AppThemeBinding Dark={DynamicResource White}, Light={DynamicResource Black}}"/>
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"/>
         </Style>
 
         <Style TargetType="Entry">
@@ -47,7 +49,9 @@
             <Setter Property="FontSize"
                     Value="14" />
             <Setter Property="Background"
-                    Value="#1e1e1e" />
+                    Value="{AppThemeBinding Dark=#1e1e1e, Light=#fafafa}" />
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
             <Setter Property="VerticalOptions"
                     Value="Center" />
             <Setter Property="VerticalTextAlignment"
@@ -56,15 +60,16 @@
                     Value="Center"/>
         </Style>
 
-        <Style TargetType="Grid" x:Key="OptionContainer">
-            <Setter Property="Margin" 
-                    Value="10, 0"/>
-            <Setter Property="HeightRequest" 
-                    Value="60"/>
-            <Setter Property="ColumnDefinitions" 
-                    Value="auto, *, auto"/>
-            <Setter Property="ColumnSpacing" 
-                    Value="5"/>
+        <Style TargetType="Grid"
+               x:Key="OptionContainer">
+            <Setter Property="Margin"
+                    Value="10, 0" />
+            <Setter Property="HeightRequest"
+                    Value="60" />
+            <Setter Property="ColumnDefinitions"
+                    Value="auto, *, auto" />
+            <Setter Property="ColumnSpacing"
+                    Value="5" />
         </Style>
     </ContentPage.Resources>
 
@@ -138,7 +143,8 @@
                     MinimumHeightRequest="40"
                     MinimumWidthRequest="120"
                     VerticalOptions="Center"
-                    Background="#1e1e1e"
+                    Background="{AppThemeBinding Light=Red, Dark=Blue}"
+                    TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"
                     ItemsSource="{Binding DesignStates}"
                     SelectedItem="{Binding CurrentDesign}"/>
         </Grid>

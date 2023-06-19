@@ -96,6 +96,7 @@ namespace Contractor.ViewModel
                         Preferences.Set("theme", Design.Dark.ToString());
                         break;
                 }
+                OnPropertyChanged();
             }
         }
         public SettingsViewModel() { }
