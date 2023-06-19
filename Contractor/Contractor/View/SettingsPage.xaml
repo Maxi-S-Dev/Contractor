@@ -5,10 +5,6 @@
              xmlns:viewmodel="clr-namespace:Contractor.ViewModel"
              Title="">
 
-    <ContentPage.BindingContext>
-        <viewmodel:SettingsViewModel/>
-    </ContentPage.BindingContext>
-
     <ContentPage.Resources>
         <Style TargetType="Label">
             <Setter Property="FontSize"
@@ -49,7 +45,7 @@
             <Setter Property="FontSize"
                     Value="14" />
             <Setter Property="Background"
-                    Value="{AppThemeBinding Dark=#1e1e1e, Light=#fafafa}" />
+                    Value="{AppThemeBinding Dark=#1e1e1e, Light=#f8fafd}" />
             <Setter Property="TextColor"
                     Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
             <Setter Property="VerticalOptions"
@@ -134,11 +130,12 @@
         
         <!-- Design -->
         <Grid Grid.Row="7" 
-              Style="{StaticResource OptionContainer}">
+              Style="{StaticResource OptionContainer}"
+              x:Name="DesignGrid">
 
             <Label Text="Light/Dark Mode"
                    />
-
+<!--
             <Picker Grid.Column="2"
                     MinimumHeightRequest="40"
                     MinimumWidthRequest="120"
@@ -146,7 +143,8 @@
                     Background="{AppThemeBinding Light=Red, Dark=Blue}"
                     TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"
                     ItemsSource="{Binding DesignStates}"
-                    SelectedItem="{Binding CurrentDesign}"/>
+                    SelectedItem="{Binding CurrentDesign}"
+                    x:Name="Picker"/>  -->
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
