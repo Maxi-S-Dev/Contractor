@@ -42,13 +42,15 @@
                    FontFamily="RobotoRegular"
                    FontSize="45"
                    VerticalOptions="Center"
-                   x:Name="TimeLabel"/>
+                   x:Name="TimeLabel"
+                   TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"/>
 
             <Label Text="{Binding Text}"
                    FontFamily="RobotoRegular"
                    FontSize="18"
                    VerticalOptions="Center" 
-                   Grid.Row="1"/>
+                   Grid.Row="1"
+                   TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"/>
         </Grid>
 
     </Grid>

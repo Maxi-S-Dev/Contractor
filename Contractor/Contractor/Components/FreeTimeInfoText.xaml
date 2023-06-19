@@ -5,16 +5,20 @@
 
     <ContentView.Resources>
         <ResourceDictionary>
-            <Style TargetType="Label">
-                <Setter Property="FontSize" Value="25" />
-                <Setter Property="FontFamily" Value="RobotoRegular" />
-                <Setter Property="TextColor" Value="{AppThemeBinding Dark={DynamicResource White}, Light={DynamicResource Black}}" />
+            <Style TargetType="Label"
+                   >
+                <Setter Property="FontSize"
+                        Value="25" />
+                <Setter Property="FontFamily"
+                        Value="RobotoRegular" />
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
             </Style>
         </ResourceDictionary>
     </ContentView.Resources>
     
     <Grid RowDefinitions="auto, auto, auto">
-        <Label Text="You have" />
+        <Label Text="You have"/>
         
         <Label Text="2h and 15mins" 
                Grid.Row="1"/>
@@ -26,7 +30,7 @@
             
             <Label Text="Free Time"
                    Grid.Column="1" 
-                   TextColor="{DynamicResource Secondary}"/>
+                   TextColor="{StaticResource Secondary}"/>
             <Label Text="available!"
                    Grid.Column="2" />
         </Grid>

@@ -5,7 +5,33 @@
              xmlns:vm="clr-namespace:Contractor.ViewModel"
              x:Class="Contractor.View.MainPage"
              Title=""
-             Background="{AppThemeBinding Dark={DynamicResource DarkBackground}, Light={DynamicResource LightBackground}}">
+             Background="{AppThemeBinding Dark={StaticResource DarkBackground}, Light={StaticResource LightBackground}}">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+            <Setter Property="FontFamily"
+                    Value="RobotoRegular" />
+        </Style>
+
+        <Style TargetType="Label"
+               x:Key="ButtonText">
+            <Setter Property="TextColor"
+                    Value="White" />
+            <Setter Property="HorizontalOptions"
+                    Value="Center" />
+            <Setter Property="VerticalOptions"
+                    Value="Center" />
+            <Setter Property="FontSize"
+                    Value="20" />
+            <Setter Property="FontFamily"
+                    Value="RobotoRegular" />
+            <Setter Property="VerticalTextAlignment"
+                    Value="Center" />
+        </Style>
+        
+    </ContentPage.Resources>
 
     <Grid RowDefinitions="Auto, *, Auto"
           Padding="20">
@@ -13,7 +39,6 @@
         <Grid RowDefinitions="Auto, Auto">
             <Label Text="Hey There!"
                    FontFamily="RobotoBlack"
-                   TextColor="{AppThemeBinding Dark={DynamicResource White}, Light={DynamicResource Black}}"
                    FontSize="40" />
 
             <components:FreeTimeInfoText Grid.Row="1" />
@@ -33,12 +58,7 @@
                     <RoundRectangle CornerRadius="10" />
                 </Border.StrokeShape>
                 <Grid>
-                    <Label TextColor="White"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           FontSize="20"
-                           FontFamily="RobotoRegular"
-                           VerticalTextAlignment="Center">
+                    <Label Style="{StaticResource ButtonText}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{Binding ProductiveButtonText}" />
@@ -59,12 +79,7 @@
                     <RoundRectangle CornerRadius="10" />
                 </Border.StrokeShape>
                 <Grid>
-                    <Label TextColor="White"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           FontSize="20"
-                           FontFamily="RobotoRegular"
-                           VerticalTextAlignment="Center">
+                    <Label Style="{StaticResource ButtonText}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{Binding FreeTimeButtonText}" />
