@@ -15,5 +15,7 @@ namespace Contractor.Model
         public int FreeSeconds { get; set; }
         public int MaxProductiveTime { get; set; }
         public int MaxFreeTime { get; set; }
+
+        public DateTime lastDate { get; set; }
     }
 }

@@ -16,6 +16,8 @@ namespace Contractor.Utils
 
             ds.MaxProductiveTime= saveData.MaxProductiveTime;
             ds.MaxFreeTime = saveData.MaxFreeTime;
+
+            ds.lastDate = saveData.lastDate;
         }
 
         public static SaveDataModel AppDataToSaveData() 
@@ -31,6 +33,8 @@ namespace Contractor.Utils
 
             saveData.MaxProductiveTime = ds.MaxProductiveTime;
             saveData.MaxFreeTime = ds.MaxFreeTime;
+
+            saveData.lastDate = ds.lastDate;
             return saveData;
         }
     }

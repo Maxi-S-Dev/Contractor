@@ -33,7 +33,9 @@ namespace Contractor.Utils
 
             var saveData = JSONSerializer.JSONToSaveData(json);
 
-            Mapper.SaveDataToAppData(saveData);
+            Trace.WriteLine(path);
+
+            if(saveData.lastDate == DateTime.Today) Mapper.SaveDataToAppData(saveData);
         }
 
         public static void Save()
@@ -45,14 +47,6 @@ namespace Contractor.Utils
             string json = JSONSerializer.SaveDataToJSON(saveData);
 
             File.WriteAllText(path, json);
-
-
-            //Preferences.Set("MaxFreeTime", DataStore.MaxFreeTime);
-            //Preferences.Set("MaxProductiveTime", DataStore.MaxProductiveTime);
-            //Preferences.Set("Factor", DataStore.Factor);
-            //Preferences.Set("ProdSeconds", DataStore.ProdSeconds);
         }
-
-        public static void Clear() => Preferences.Clear();
     }
 }

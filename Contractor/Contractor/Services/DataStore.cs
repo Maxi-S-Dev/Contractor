@@ -38,6 +38,8 @@ namespace Contractor.Services
 
         public int MaxFreeTime { get; set; } = eightHours;
 
+        public DateTime lastDate { get; set; } = DateTime.Now.Date;
+
 
         public void IncreaseProd()
         {

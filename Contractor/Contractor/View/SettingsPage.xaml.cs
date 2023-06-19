@@ -33,12 +33,21 @@ public partial class SettingsPage : ContentPage
         p.MinimumHeightRequest = 40;
         p.VerticalOptions = LayoutOptions.Center;
 
-        if (Application.Current.UserAppTheme == AppTheme.Dark) p.Background = Color.FromArgb("#ff1e1e1e");
-        else p.Background = Color.FromArgb("#fff8fafd");
-        p.TextColor = Colors.White;
+        if (Application.Current.UserAppTheme == AppTheme.Dark)
+        {
+            p.BackgroundColor = Color.FromArgb("#ff1e1e1e");
+            p.TextColor = Colors.White;
+        }
+        else
+        {
+            p.BackgroundColor = Color.FromArgb("#fff8fafd");
+            p.TextColor = Colors.Black;
+        }
+
         DesignGrid.Add(p, 2, 0);
         p.ItemsSource = vm.DesignStates;
         p.SelectedItem = vm.CurrentDesign;
+        
 
 
         p.SelectedIndexChanged += (s, e) =>
