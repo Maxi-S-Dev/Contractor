@@ -1,0 +1,81 @@
+is_global = true
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = Contractor
+build_property.ProjectDir = C:\Github\Contractor\Contractor\Contractor\
+
+[C:/Github/Contractor/Contractor/Contractor/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/Components/FreeTimeInfoText.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Components.FreeTimeInfoText.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\FreeTimeInfoText.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\FreeTimeInfoText.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/Components/RoundProgressBar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Components.RoundProgressBar.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\RoundProgressBar.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\RoundProgressBar.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/Components/TimeListView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Components.TimeListView.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\TimeListView.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\TimeListView.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/Components/TimerCarouselView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Components.TimerCarouselView.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\TimerCarouselView.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\TimerCarouselView.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/Resources/Styles/LightModeColors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Resources.Styles.LightModeColors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\LightModeColors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\LightModeColors.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/View/HelpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.View.HelpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\HelpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\HelpPage.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/View/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.View.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MainPage.xaml
+
+[C:/Github/Contractor/Contractor/Contractor/View/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Contractor.View.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\SettingsPage.xaml

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contractor.View.SettingsPage"
+             xmlns:viewmodel="clr-namespace:Contractor.ViewModel"
+             Title="">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize"
+                    Value="18" />
+            <Setter Property="FontFamily"
+                    Value="RobotoRegular" />
+            <Setter Property="VerticalOptions"
+                    Value="Center" />
+            <Setter Property="VerticalTextAlignment"
+                    Value="Center" />
+            <Setter Property="Grid.Column"
+                    Value="1" />
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"/>
+        </Style>
+
+        <Style TargetType="Label" 
+               x:Key="Heading">
+            <Setter Property="FontSize" 
+                    Value="30"/>
+            <Setter Property="FontFamily" 
+                    Value="RobotoBlack"/>
+            <Setter Property="FontAttributes" 
+                    Value="Bold"/>
+            <Setter Property="Margin" 
+                    Value="0, 10"/>
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"/>
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="WidthRequest"
+                    Value="30" />
+            <Setter Property="MinimumHeightRequest"
+                    Value="18" />
+            <Setter Property="Grid.Column"
+                    Value="2" />
+            <Setter Property="FontSize"
+                    Value="14" />
+            <Setter Property="Background"
+                    Value="{AppThemeBinding Dark=#1e1e1e, Light=#f8fafd}" />
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+            <Setter Property="VerticalOptions"
+                    Value="Center" />
+            <Setter Property="VerticalTextAlignment"
+                    Value="Center" />
+            <Setter Property="HorizontalTextAlignment" 
+                    Value="Center"/>
+        </Style>
+
+        <Style TargetType="Grid"
+               x:Key="OptionContainer">
+            <Setter Property="Margin"
+                    Value="10, 0" />
+            <Setter Property="HeightRequest"
+                    Value="60" />
+            <Setter Property="ColumnDefinitions"
+                    Value="auto, *, auto" />
+            <Setter Property="ColumnSpacing"
+                    Value="5" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="True"
+                            IsEnabled="True" />
+    </Shell.BackButtonBehavior>
+
+    <VerticalStackLayout Padding="20">
+
+        <Label Text="General Settings"
+               Style="{StaticResource Heading}"/>
+
+        <!-- Max Free Time-->
+        <Grid Grid.Row="1" 
+              Style="{StaticResource OptionContainer}">
+
+            <Label Text="Maximum Productive Time per Day"/>
+
+            <Entry Text="{Binding MaxProdTime}"/>
+        </Grid>
+
+        <!-- Max Free Time-->
+        <Grid Grid.Row="2" 
+              Style="{StaticResource OptionContainer}">
+
+            <Label Text="Maximum Free Time per Day"/>
+
+            <Entry Text="{Binding MaxFreeTime}"/>
+        </Grid>
+
+        <!-- Factor -->
+        <Grid Grid.Row="3" 
+              Style="{StaticResource OptionContainer}">
+
+            <Label Text="Factor between Productive and Free Time"/>
+
+            <Entry Text="{Binding Factor}"/>
+        </Grid>
+
+        <!-- Carry Free Time Over -->
+        <Grid Grid.Row="4" 
+              Style="{StaticResource OptionContainer}">
+
+            <Label Text="Reset Free Time every day"/>
+
+            <Switch IsToggled="{Binding ResetFreeTime}" Grid.Column="2"
+                    MaximumWidthRequest="50" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    />
+        </Grid>
+
+        <!--Stroke-->
+        <Path Stroke="white" Data="M 0,0 L 1000,0" 
+              Grid.Row="5" 
+              HeightRequest="5" 
+              StrokeThickness=".5" 
+              Margin="5"/>
+
+        <Label Text="Appearance" 
+               Style="{StaticResource Heading}"/>
+        
+        <!-- Design -->
+        <Grid Grid.Row="7" 
+              Style="{StaticResource OptionContainer}"
+              x:Name="DesignGrid">
+
+            <Label Text="Light/Dark Mode" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
+    
+    <!--        
+        Premium: 
+            Custom Colors
+            
+            
+        -->

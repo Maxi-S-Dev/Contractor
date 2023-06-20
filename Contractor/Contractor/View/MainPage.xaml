@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:Contractor.Components"
+             xmlns:vm="clr-namespace:Contractor.ViewModel"
+             x:Class="Contractor.View.MainPage"
+             Title=""
+             Background="{AppThemeBinding Dark={StaticResource DarkBackground}, Light={StaticResource LightBackground}}">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+            <Setter Property="FontFamily"
+                    Value="RobotoRegular" />
+        </Style>
+
+        <Style TargetType="Label"
+               x:Key="ButtonText">
+            <Setter Property="TextColor"
+                    Value="White" />
+            <Setter Property="HorizontalOptions"
+                    Value="Center" />
+            <Setter Property="VerticalOptions"
+                    Value="Center" />
+            <Setter Property="FontSize"
+                    Value="20" />
+            <Setter Property="FontFamily"
+                    Value="RobotoRegular" />
+            <Setter Property="VerticalTextAlignment"
+                    Value="Center" />
+        </Style>
+        
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, *, Auto"
+          Padding="20">
+
+        <Grid RowDefinitions="Auto, Auto">
+            <Label Text="Hey There!"
+                   FontFamily="RobotoBlack"
+                   FontSize="40" />
+
+            <components:FreeTimeInfoText Grid.Row="1" />
+        </Grid>
+
+        <Grid Grid.Row="1"
+              x:Name="ProgressbarGrid">
+            
+        </Grid>
+
+        <Grid Grid.Row="2"
+              RowDefinitions="auto, auto"
+              RowSpacing="4">
+
+            <Border Background="#6200EE">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Grid>
+                    <Label Style="{StaticResource ButtonText}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding ProductiveButtonText}" />
+                                <Span Text="Productive"
+                                      FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Button Background="transparent"
+                            Command="{Binding ProductiveTimeCommand}" />
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1"
+                    Background="#7F39FB">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Grid>
+                    <Label Style="{StaticResource ButtonText}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding FreeTimeButtonText}" />
+                                <Span Text="Free Time"
+                                      FontAttributes="Bold" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Button Background="transparent"
+                            Command="{Binding FreeTimeCommand}" />
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentPage>
