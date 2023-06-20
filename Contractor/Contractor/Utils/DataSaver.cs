@@ -7,6 +7,7 @@ using System.IO;
 using Contractor.Interfaces;
 using System.Diagnostics;
 using System.ComponentModel;
+using Contractor.Services;
 
 namespace Contractor.Utils
 {
@@ -35,7 +36,11 @@ namespace Contractor.Utils
 
             Trace.WriteLine(path);
 
-            if(saveData.lastDate == DateTime.Today) Mapper.SaveDataToAppData(saveData);
+            if (saveData.lastDate == DateTime.Today) Mapper.SaveDataToAppData(saveData);
+            else if (saveData.lastDate == DateTime.Today.AddDays(-1).Date && Preferences.Get("resetFreeTime", true) == false)
+            {
+                (Application.Current.Handler.MauiContext.Services.GetService(typeof(DataStore)) as DataStore).FreeSeconds = saveData.FreeSeconds;
+            }
         }
 
         public static void Save()

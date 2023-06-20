@@ -112,10 +112,11 @@
 
             <Label Text="Reset Free Time every day"/>
 
-            <Switch IsToggled="False" Grid.Column="2"
+            <Switch IsToggled="{Binding ResetFreeTime}" Grid.Column="2"
                     MaximumWidthRequest="50" 
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
+                    VerticalOptions="Center"
+                    />
         </Grid>
 
         <!--Stroke-->
@@ -133,25 +134,12 @@
               Style="{StaticResource OptionContainer}"
               x:Name="DesignGrid">
 
-            <Label Text="Light/Dark Mode"
-                   />
-<!--
-            <Picker Grid.Column="2"
-                    MinimumHeightRequest="40"
-                    MinimumWidthRequest="120"
-                    VerticalOptions="Center"
-                    Background="{AppThemeBinding Light=Red, Dark=Blue}"
-                    TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"
-                    ItemsSource="{Binding DesignStates}"
-                    SelectedItem="{Binding CurrentDesign}"
-                    x:Name="Picker"/>  -->
+            <Label Text="Light/Dark Mode" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
     
-    <!--
-        LightMode/Darkmode/System
-        
+    <!--        
         Premium: 
             Custom Colors
             

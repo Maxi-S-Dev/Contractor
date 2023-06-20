@@ -1,4 +1,5 @@
 ﻿using Contractor.Interfaces;
+using System.Diagnostics;
 
 namespace Contractor.Services
 {
@@ -45,8 +46,9 @@ namespace Contractor.Services
         {
             ProdSeconds += 1;
             FreeSeconds += Factor;
+            Trace.WriteLine("Incresed Prod " + ProdSeconds + " Increased Free " + FreeSeconds + " Factor " + Factor);
         }
             
         public void DecreaseFree() => FreeSeconds -= 1;
-    }
+    } 
 }

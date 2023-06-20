@@ -49,9 +49,9 @@ namespace Contractor.ViewModel
             }
             set
             {
-                int.TryParse(value, out int newFactor);
+                float.TryParse(value, out float newFactor);
 
-                DataStore.Factor= newFactor;
+                DataStore.Factor = newFactor;
                 OnPropertyChanged(nameof(Factor));
             }
         }
@@ -99,6 +99,19 @@ namespace Contractor.ViewModel
                 OnPropertyChanged();
             }
         }
+
+        public bool ResetFreeTime
+        {
+            get
+            {
+                return Preferences.Get("resetFreeTime", false);
+            }
+            set
+            {
+                Preferences.Set("resetFreeTime", value);
+            }
+        }
+
         public SettingsViewModel() { }
     }
 }
