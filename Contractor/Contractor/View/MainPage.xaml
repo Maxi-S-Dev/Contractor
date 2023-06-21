@@ -41,7 +41,8 @@
                    FontFamily="RobotoBlack"
                    FontSize="40" />
 
-            <components:FreeTimeInfoText Grid.Row="1" />
+            <components:FreeTimeInfoText Grid.Row="1"
+                                         BindingContext="{Binding FreeTimeInfoTextViewModel}"/>
         </Grid>
 
         <Grid Grid.Row="1"

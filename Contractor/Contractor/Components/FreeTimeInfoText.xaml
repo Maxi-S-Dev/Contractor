@@ -3,11 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Contractor.Components.FreeTimeInfoText"
              xmlns:vm="clr-namespace:Contractor.ViewModel">
-
-    <ContentView.BindingContext>
-        <vm:FreeTimeInfoTextViewModel />
-    </ContentView.BindingContext>
-
     <ContentView.Resources>
         <ResourceDictionary>
             <Style TargetType="Label"

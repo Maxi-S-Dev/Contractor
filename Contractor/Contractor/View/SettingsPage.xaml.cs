@@ -10,16 +10,17 @@ public partial class SettingsPage : ContentPage
 
     Picker p;
 
+    const string pName = "Picker";
+
 	public SettingsPage()
 	{
 		InitializeComponent();
-
+        
         vm = new SettingsViewModel();
         BindingContext = vm;
 
         Application.Current.RequestedThemeChanged += (s, e) =>
         {
-            p = null;
             LoadPicker();
         };
 
@@ -28,6 +29,11 @@ public partial class SettingsPage : ContentPage
 
     private void LoadPicker()
     {
+        if (p is not null)
+        {
+            DesignGrid.Remove(p);
+        }
+
         p = new();
         p.MinimumWidthRequest = 120;
         p.MinimumHeightRequest = 40;

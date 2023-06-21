@@ -1,5 +1,6 @@
 ﻿using Contractor.Services;
 using Contractor.Utils;
+using System.ComponentModel;
 
 namespace Contractor.ViewModel
 {
@@ -17,12 +18,22 @@ namespace Contractor.ViewModel
             }
         }
 
-        public FreeTimeInfoTextViewModel()
+        public FreeTimeInfoTextViewModel(MainViewModel mainVm)
         {
             MainTimer.Dispatcher.Tick += (s, e) =>
             {
                 OnPropertyChanged(nameof(Text));
             };
+
+            mainVm.PropertyChanged += MainViewModelPropertyChanged;
+        }
+
+        private void MainViewModelPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName == nameof(Services.DataStore)) 
+            {
+                OnPropertyChanged(nameof(Text));
+            }
         }
     }
 }
