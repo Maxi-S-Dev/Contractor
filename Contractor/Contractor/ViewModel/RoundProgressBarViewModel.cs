@@ -80,6 +80,7 @@ namespace Contractor.ViewModel
             {
                 Trace.WriteLine("RoundTimer");
                 SetTimeText(timerType);
+                UpdateClockdrawable();
             }
         }
 
@@ -88,15 +89,18 @@ namespace Contractor.ViewModel
         {
             MainTimer.Dispatcher.Tick += (s, e) =>
             {
-                float percent = timerType == TimerType.Productive ? (dataStore.ProdSeconds * 100) / dataStore.MaxProductiveTime : (dataStore.FreeSeconds * 100) / dataStore.MaxFreeTime;
-
-                //(dataStore.ProdSeconds * 100) / dataStore.MaxProductiveTime;
-
-                ClockDrawable.SetDegreesUsingPercent(percent);
-                OnPropertyChanged(nameof(ClockDrawable));
+                UpdateClockdrawable();
 
                 SetTimeText(timerType);
             };
+        }
+
+        private void UpdateClockdrawable()
+        {
+            float percent = timerType == TimerType.Productive ? (dataStore.ProdSeconds * 100) / dataStore.MaxProductiveTime : (dataStore.FreeSeconds * 100) / dataStore.MaxFreeTime;
+
+            ClockDrawable.SetDegreesUsingPercent(percent);
+            OnPropertyChanged(nameof(ClockDrawable));
         }
 
         //Calculates and Updates the Text shown in the Progressbar
