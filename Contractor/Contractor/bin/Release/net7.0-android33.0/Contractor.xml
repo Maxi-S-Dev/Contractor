@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Contractor</name>
+    </assembly>
+    <members>
+        <member name="M:Contractor.Utils.MainTimer.StartTimer">
+            <summary>
+            Starts the Timer
+            If it is the first start it creates the Tick Event to add the seconds
+            </summary>
+        </member>
+        <member name="M:Contractor.ViewModel.MainViewModel.#ctor">
+            <summary>
+            Creates the View Model for the Carousel/ListView
+            </summary>
+        </member>
+        <member name="M:Contractor.ViewModel.MainViewModel.CreateCommands">
+            <summary>
+            Creates the Commands for the Buttons
+            They Start the Acording Timer
+            They update the Text from the Buttons
+            </summary>
+        </member>
+        <member name="M:Contractor.ViewModel.RoundProgressBarViewModel.#ctor(Contractor.Enums.TimerType)">
+            <summary>
+            Creates the RoundProgessBar(ClockDrawable)
+            </summary>
+            <param name="timerType"></param>
+        </member>
+    </members>
+</doc>

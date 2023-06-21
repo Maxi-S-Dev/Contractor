@@ -20152,7 +20152,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-android",
+        "net7.0-android33.0",
         "net7.0-maccatalyst",
         "net7.0-windows10.0.22621.0"
       ],
@@ -20163,7 +20163,7 @@
       },
       "frameworks": {
         "net7.0-android33.0": {
-          "targetAlias": "net7.0-android",
+          "targetAlias": "net7.0-android33.0",
           "projectReferences": {}
         },
         "net7.0-maccatalyst16.1": {
@@ -20183,7 +20183,7 @@
     },
     "frameworks": {
       "net7.0-android33.0": {
-        "targetAlias": "net7.0-android",
+        "targetAlias": "net7.0-android33.0",
         "dependencies": {
           "Microsoft.Extensions.Configuration": {
             "target": "Package",

@@ -10,7 +10,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9</PackageIdentityName>
-    <PackageIdentityPublisher>CN=max03</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Majost</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -19,36 +19,36 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>FCF37991D42BEB08FDA747A5788A90CAC6CB2A8997B2E564D14EDBB6F7E7F41A</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_0.0.12.0_x64__05sy6bk4xnnf2</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_05sy6bk4xnnf2!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>9548225CD0CC2F80B49BFEFFDCF7D03402236087117AE87C58F2AD6E936567AE</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_0.1.0.0_x64__e92ds6ex86fsr</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9_e92ds6ex86fsr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>5dede3a1-f99a-40e1-9cad-c0e4015ac9c9</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=max03</RegisteredPackagePublisher>
-    <RegisteredVersion>0.0.12.0</RegisteredVersion>
+    <RegisteredPackagePublisher>CN=Majost</RegisteredPackagePublisher>
+    <RegisteredVersion>0.1.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-20T17:35:15.840</Modified>
+      <Modified>2023-06-21T11:55:12.519</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-06-20T17:24:37.311</Modified>
+      <Modified>2023-06-21T11:55:11.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\Contractor.runtimeconfig.json">
       <PackagePath>Contractor.runtimeconfig.json</PackagePath>
-      <Modified>2023-06-18T07:39:53.349</Modified>
+      <Modified>2023-06-21T11:29:32.218</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\bin\Debug\net7.0-windows10.0.22621.0\win10-x64\Contractor.dll">
       <PackagePath>Contractor.dll</PackagePath>
-      <Modified>2023-06-20T17:35:14.588</Modified>
+      <Modified>2023-06-21T11:55:10.525</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\apphost.exe">
       <PackagePath>Contractor.exe</PackagePath>
-      <Modified>2023-06-20T17:35:14.598</Modified>
+      <Modified>2023-06-21T11:55:10.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\max03\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.7\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -920,7 +920,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\Contractor.deps.json">
       <PackagePath>Contractor.deps.json</PackagePath>
-      <Modified>2023-06-20T17:35:15.704</Modified>
+      <Modified>2023-06-21T11:55:12.336</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -960,7 +960,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Black.ttf">
       <PackagePath>Roboto-Black.ttf</PackagePath>
-      <Modified>2023-06-18T07:29:55.686</Modified>
+      <Modified>2023-06-18T07:29:25.786</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-BlackItalic.ttf">
       <PackagePath>Roboto-BlackItalic.ttf</PackagePath>
@@ -996,7 +996,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Regular.ttf">
       <PackagePath>Roboto-Regular.ttf</PackagePath>
-      <Modified>2023-06-18T07:29:55.718</Modified>
+      <Modified>2023-06-18T07:29:25.802</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Thin.ttf">
       <PackagePath>Roboto-Thin.ttf</PackagePath>

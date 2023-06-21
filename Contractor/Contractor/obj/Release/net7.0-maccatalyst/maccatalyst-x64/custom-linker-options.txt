@@ -4,7 +4,7 @@ AreAnyAssembliesTrimmed=true
 				AOTCompiler=
 				AOTOutputDirectory=obj\Release\net7.0-maccatalyst\maccatalyst-x64\nativelibraries/aot-output/
 				AppBundleManifestPath=bin\Release\net7.0-maccatalyst\maccatalyst-x64\Contractor.app\Contents/Info.plist
-				CacheDirectory=D:\github\Contractor\Contractor\Contractor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\linker-cache
+				CacheDirectory=C:\Github\Contractor\Contractor\Contractor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\linker-cache
 				
 				Debug=false
 				DeploymentTarget=
@@ -183,7 +183,7 @@ FrameworkAssembly=System.Private.CoreLib
 				Interpreter=
 				IntermediateLinkDir=obj\Release\net7.0-maccatalyst\maccatalyst-x64\linked\
 				InvariantGlobalization=false
-				ItemsDirectory=D:\github\Contractor\Contractor\Contractor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\linker-items
+				ItemsDirectory=C:\Github\Contractor\Contractor\Contractor\obj\Release\net7.0-maccatalyst\maccatalyst-x64\linker-items
 				IsAppExtension=false
 				IsSimulatorBuild=
 				LibMonoLinkMode=dylib

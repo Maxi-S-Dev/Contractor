@@ -45,6 +45,11 @@ public partial class App : Application
             Utils.DataSaver.Save();
         };
 
+        Window.Stopped += (s, e) =>
+        {
+            Utils.DataSaver.Save();
+        };
+
         return Window;
     }
 }

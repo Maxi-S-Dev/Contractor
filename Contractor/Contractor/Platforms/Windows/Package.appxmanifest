@@ -7,8 +7,8 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity Name="maui-package-name-placeholder" 
-			Publisher="CN=max03" 
-			Version="0.0.12.0" />
+			Publisher="CN=Majost" 
+			Version="0.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="24F9F26A-AB76-4B45-BFFA-ACB08309A888" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

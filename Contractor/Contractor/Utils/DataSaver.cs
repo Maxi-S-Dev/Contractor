@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using Contractor.Interfaces;
+﻿using Contractor.Services;
 using System.Diagnostics;
-using System.ComponentModel;
-using Contractor.Services;
 
 namespace Contractor.Utils
 {
@@ -16,25 +8,18 @@ namespace Contractor.Utils
         static string directoryPath = FileSystem.Current.AppDataDirectory;
         static string fileName = "AppData.json";
 
-        public static void Load()
+        public async static void Load()
         { 
             string path = Path.Combine(directoryPath, fileName);
 
-            //File.Delete(path);
-
-            if (!File.Exists(path))
-            {
-                File.Create(path);
-                return;
-            }
+            if (!File.Exists(path)) return;
 
             string json = File.ReadAllText(path);
+
 
             if (string.IsNullOrEmpty(json)) return;
 
             var saveData = JSONSerializer.JSONToSaveData(json);
-
-            Trace.WriteLine(path);
 
             if (saveData.lastDate == DateTime.Today) Mapper.SaveDataToAppData(saveData);
             else if (saveData.lastDate == DateTime.Today.AddDays(-1).Date && Preferences.Get("resetFreeTime", true) == false)
@@ -43,7 +28,7 @@ namespace Contractor.Utils
             }
         }
 
-        public static void Save()
+        public static async void Save()
         {
             string path = Path.Combine(directoryPath, fileName);
 
@@ -51,7 +36,9 @@ namespace Contractor.Utils
 
             string json = JSONSerializer.SaveDataToJSON(saveData);
 
-            File.WriteAllText(path, json);
+            using FileStream outputStream = File.OpenWrite(path);
+            using StreamWriter streamWriter = new StreamWriter(outputStream);
+            await streamWriter.WriteAsync(json);
         }
     }
 }
