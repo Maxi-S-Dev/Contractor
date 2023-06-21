@@ -5,6 +5,7 @@ using System.Reflection.Metadata;
 using System.Diagnostics;
 using Contractor.Utils;
 using Contractor.Services;
+using System.ComponentModel;
 
 namespace Contractor.ViewModel
 {
@@ -53,12 +54,17 @@ namespace Contractor.ViewModel
         public ClockDrawable ClockDrawable { get; }
 
         DataStore dataStore;
+
+        private TimerType timerType;
         /// <summary>
         /// Creates the RoundProgessBar(ClockDrawable)
         /// </summary>
         /// <param name="timerType"></param>
-        public RoundProgressBarViewModel(TimerType timerType)
+        public RoundProgressBarViewModel(TimerType _timerType, TimerCarouselViewModel vm)
         {
+            timerType = _timerType;
+            vm.PropertyChanged += ViewModelPropertyChanged;
+
             ClockDrawable = new ClockDrawable(timerType);
 
             SetTimerTick(timerType);
@@ -66,6 +72,15 @@ namespace Contractor.ViewModel
             dataStore = Application.Current.Handler.MauiContext.Services.GetService(typeof(DataStore)) as DataStore;
 
             SetTimeText(timerType);
+        }
+
+        private void ViewModelPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName == nameof(Services.DataStore)) 
+            {
+                Trace.WriteLine("RoundTimer");
+                SetTimeText(timerType);
+            }
         }
 
         //Updates the UI on every Timer Tick

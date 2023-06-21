@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Contractor.Model;
+using System.ComponentModel;
+using System.Diagnostics;
 
 namespace Contractor.ViewModel
 {
@@ -46,12 +48,23 @@ namespace Contractor.ViewModel
         }
 
         //Applys both ViewModels and creates the list
-        public TimerCarouselViewModel() 
+        public TimerCarouselViewModel(MainViewModel mainVm) 
         {
-            productiveTimer = new RoundProgressBarViewModel(TimerType.Productive);
-            freeTimeTimer = new RoundProgressBarViewModel(TimerType.FreeTime);
+            mainVm.PropertyChanged += MainViewModelPropertyChanged;
+
+            productiveTimer = new RoundProgressBarViewModel(TimerType.Productive, this);
+            freeTimeTimer = new RoundProgressBarViewModel(TimerType.FreeTime, this);
 
             TimerList = new ObservableCollection<Model.Timer> { new Model.Timer() { Context = productiveTimer }, new Model.Timer() { Context = freeTimeTimer } };
+        }
+
+        private void MainViewModelPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName == nameof(Services.DataStore))
+            {
+                Trace.WriteLine("CarousellView");
+                OnPropertyChanged(nameof(Services.DataStore));
+            }
         }
     }
 }

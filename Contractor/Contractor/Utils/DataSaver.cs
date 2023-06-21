@@ -1,4 +1,5 @@
 ﻿using Contractor.Services;
+using Contractor.ViewModel;
 using System.Diagnostics;
 
 namespace Contractor.Utils
@@ -8,16 +9,16 @@ namespace Contractor.Utils
         static string directoryPath = FileSystem.Current.AppDataDirectory;
         static string fileName = "AppData.json";
 
-        public async static void Load()
+        public static Task Load()
         { 
             string path = Path.Combine(directoryPath, fileName);
 
-            if (!File.Exists(path)) return;
+            if (!File.Exists(path)) return Task.CompletedTask;
 
             string json = File.ReadAllText(path);
 
 
-            if (string.IsNullOrEmpty(json)) return;
+            if (string.IsNullOrEmpty(json)) return Task.CompletedTask;
 
             var saveData = JSONSerializer.JSONToSaveData(json);
 
@@ -26,6 +27,7 @@ namespace Contractor.Utils
             {
                 (Application.Current.Handler.MauiContext.Services.GetService(typeof(DataStore)) as DataStore).FreeSeconds = saveData.FreeSeconds;
             }
+            return Task.CompletedTask;
         }
 
         public static async void Save()

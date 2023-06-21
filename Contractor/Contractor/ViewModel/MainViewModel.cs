@@ -50,13 +50,27 @@ namespace Contractor.ViewModel
         public ICommand FreeTimeCommand { get; private set; }
         public ICommand ProductiveTimeCommand { get; private set; }
 
+        private SynchronizationContext _uiContext;
+
+
         /// <summary>
         /// Creates the View Model for the Carousel/ListView
         /// </summary>
         public MainViewModel() 
         {
-            TimerCarouselVm = new TimerCarouselViewModel();
-            DataSaver.Load();
+            _uiContext = SynchronizationContext.Current;
+
+
+            TimerCarouselVm = new TimerCarouselViewModel(this);
+            DataSaver.Load().ContinueWith(task =>
+            {
+                _uiContext.Post(_ =>
+                {
+                    Trace.WriteLine("MainVM");
+                    OnPropertyChanged(nameof(Services.DataStore));
+                }, null);
+            });
+            OnPropertyChanged("Time");
             CreateCommands();
         }
 
