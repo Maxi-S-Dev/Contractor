@@ -721,38 +721,8 @@
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Black.ttf">
       <PackagePath>Roboto-Black.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-BlackItalic.ttf">
-      <PackagePath>Roboto-BlackItalic.ttf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Bold.ttf">
-      <PackagePath>Roboto-Bold.ttf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-BoldItalic.ttf">
-      <PackagePath>Roboto-BoldItalic.ttf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Italic.ttf">
-      <PackagePath>Roboto-Italic.ttf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Light.ttf">
-      <PackagePath>Roboto-Light.ttf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-LightItalic.ttf">
-      <PackagePath>Roboto-LightItalic.ttf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Medium.ttf">
-      <PackagePath>Roboto-Medium.ttf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-MediumItalic.ttf">
-      <PackagePath>Roboto-MediumItalic.ttf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Regular.ttf">
       <PackagePath>Roboto-Regular.ttf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-Thin.ttf">
-      <PackagePath>Roboto-Thin.ttf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\f\Roboto-ThinItalic.ttf">
-      <PackagePath>Roboto-ThinItalic.ttf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Contractor\Contractor\Contractor\obj\Debug\net7.0-windows10.0.22621.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>

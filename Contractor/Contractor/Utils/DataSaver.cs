@@ -10,8 +10,9 @@ namespace Contractor.Utils
         static string fileName = "AppData.json";
 
         public static Task Load()
-        { 
+        {
             string path = Path.Combine(directoryPath, fileName);
+
 
             if (!File.Exists(path)) return Task.CompletedTask;
 
