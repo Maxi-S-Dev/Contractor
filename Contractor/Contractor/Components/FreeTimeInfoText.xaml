@@ -30,7 +30,7 @@
 
             <Label Text="{Binding TimeType}"
                    Grid.Column="1"
-                   TextColor="#7F39FB"
+                   TextColor="{StaticResource Secondary}"
                    FontAttributes="Bold"/>
             <Label Text="{Binding ActionText}"
                    Grid.Column="2" />

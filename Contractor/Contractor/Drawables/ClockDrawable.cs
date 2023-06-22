@@ -1,6 +1,4 @@
 ﻿using Contractor.Enums;
-using System.Diagnostics;
-using System.Drawing;
 using Color = Microsoft.Maui.Graphics.Color;
 
 namespace Contractor.Drawables
@@ -70,11 +68,11 @@ namespace Contractor.Drawables
         {
             if(TimerType == TimerType.Productive) 
             {
-                Color = Color.FromArgb("#FF6200EE");
+                Color = Color.FromArgb("#FF7326FC");
                 return;
             }
 
-            Color = Color.FromArgb("#FF7F39FB");
+            Color = Color.FromArgb("#FF985EFF");
         }
     }
 }

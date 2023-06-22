@@ -1,6 +1,4 @@
 ﻿using Contractor.Services;
-using Contractor.ViewModel;
-using System.Diagnostics;
 
 namespace Contractor.Utils
 {
@@ -13,12 +11,9 @@ namespace Contractor.Utils
         {
             string path = Path.Combine(directoryPath, fileName);
 
-            File.Delete(path);
-
             if (!File.Exists(path)) return Task.CompletedTask;
 
             string json = File.ReadAllText(path);
-
 
             if (string.IsNullOrEmpty(json)) return Task.CompletedTask;
 
