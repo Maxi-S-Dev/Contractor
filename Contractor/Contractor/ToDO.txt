@@ -1,0 +1,8 @@
+change main colors 
+MainColor: #7326FC
+SecondaryColor: #985EFF
+
+Add icons
+Add info/help text
+Add custom colors (Premium)
+Add history
