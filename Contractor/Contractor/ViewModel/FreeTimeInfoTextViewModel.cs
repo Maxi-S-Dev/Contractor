@@ -11,10 +11,18 @@ namespace Contractor.ViewModel
         {
             get
             {
-                int hours = (int)(ds.FreeSeconds / 3600);
-                int mins = (int)((ds.FreeSeconds % 3600) / 60);
+                int hours = (int)Math.Abs(ds.FreeSeconds / 3600);
+                int mins = (int)Math.Abs((ds.FreeSeconds % 3600) / 60);
 
                 return $"{hours}h and {mins}mins";
+            }
+        }
+
+        public string ActionText
+        {
+            get
+            {
+                return ds.FreeSeconds < 0 ? "to catch up!" : "available!";
             }
         }
 
@@ -23,6 +31,7 @@ namespace Contractor.ViewModel
             MainTimer.Dispatcher.Tick += (s, e) =>
             {
                 OnPropertyChanged(nameof(Text));
+                OnPropertyChanged(nameof(ActionText));
             };
 
             mainVm.PropertyChanged += MainViewModelPropertyChanged;
