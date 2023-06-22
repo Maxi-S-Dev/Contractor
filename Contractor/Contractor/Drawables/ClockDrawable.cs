@@ -22,9 +22,14 @@ namespace Contractor.Drawables
 
         float degree = 0;
 
-        Color Color = Colors.Red;
-        public ClockDrawable(TimerType type) => SetMainColor(type);
-        
+        Color Color;
+
+        TimerType TimerType;
+        public ClockDrawable(TimerType type)
+        {
+            TimerType = type;
+            SetMainColor();
+        }
 
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
@@ -41,7 +46,8 @@ namespace Contractor.Drawables
             //Inner Bar
             canvas.StrokeColor = Color;
             canvas.StrokeSize = barWidth;
-            canvas.DrawArc(dirtyRect.Center.X - radius, dirtyRect.Center.Y - radius, width, height, 90f, 90f + degree, true, false);
+            if(degree <= 0) canvas.DrawArc(dirtyRect.Center.X - radius, dirtyRect.Center.Y - radius, width, height, 90f, 90f + degree, true, false);
+            else canvas.DrawArc(dirtyRect.Center.X - radius, dirtyRect.Center.Y - radius, width, height, 90f, 90f + degree, false, false);
 
             //Circel at the end of the bar
             circleX = dirtyRect.Center.X + radius * -(float)Math.Sin(2 * Math.PI / 360 * degree);
@@ -55,12 +61,14 @@ namespace Contractor.Drawables
         public void SetDegreesUsingPercent(float percent)
         {
             degree = -3.6f * percent;
+            if (degree > 0) Color = Color.FromArgb("#FF990000");
+            else SetMainColor();
         }
 
         //Sets the color of the inner bar
-        private void SetMainColor(TimerType type)
+        private void SetMainColor()
         {
-            if(type == TimerType.Productive) 
+            if(TimerType == TimerType.Productive) 
             {
                 Color = Color.FromArgb("#FF6200EE");
                 return;

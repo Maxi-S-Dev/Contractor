@@ -119,13 +119,15 @@ namespace Contractor.ViewModel
                 time = (int)dataStore.FreeSeconds;
             }
 
-            string hours = (time / 3600).ToString();
+            string prefix = time < 0 ? "-" : "";
+
+            string hours = Math.Abs(time / 3600).ToString();
             if (hours.Length == 1) hours = "0" + hours;
             
-            string minutes = ((time % 3600) / 60).ToString();
+            string minutes = Math.Abs((time % 3600) / 60).ToString();
             if (minutes.Length == 1) minutes = "0" + minutes;
 
-            Time = $"{hours}:{minutes}";
+            Time = $"{prefix}{hours}:{minutes}";
         }        
     }
 }

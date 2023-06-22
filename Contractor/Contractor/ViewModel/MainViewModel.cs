@@ -25,7 +25,7 @@ namespace Contractor.ViewModel
         }
 
         //First half of the Free Time Button Text 
-        private string freeTimeButtonText = "Start Being ";
+        private string freeTimeButtonText = "Start your ";
         public string FreeTimeButtonText
         {
             get => freeTimeButtonText;
