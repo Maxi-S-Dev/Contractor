@@ -18,6 +18,14 @@ namespace Contractor.ViewModel
             }
         }
 
+        public string TimeType
+        {
+            get 
+            {
+                return ds.FreeSeconds < 0 ? " Productive Time " : " Free Time ";
+            }
+        }
+
         public string ActionText
         {
             get
@@ -32,6 +40,7 @@ namespace Contractor.ViewModel
             {
                 OnPropertyChanged(nameof(Text));
                 OnPropertyChanged(nameof(ActionText));
+                OnPropertyChanged(nameof(TimeType));
             };
 
             mainVm.PropertyChanged += MainViewModelPropertyChanged;

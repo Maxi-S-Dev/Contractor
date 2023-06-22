@@ -27,10 +27,11 @@
               Grid.Row="2"
               ColumnSpacing="5">
             <Label Text="of" Grid.Column="0"/>
-            
-            <Label Text="Free Time"
-                   Grid.Column="1" 
-                   TextColor="{StaticResource Secondary}"/>
+
+            <Label Text="{Binding TimeType}"
+                   Grid.Column="1"
+                   TextColor="#7F39FB"
+                   FontAttributes="Bold"/>
             <Label Text="{Binding ActionText}"
                    Grid.Column="2" />
         </Grid>

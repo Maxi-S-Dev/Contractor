@@ -22,7 +22,7 @@
             They update the Text from the Buttons
             </summary>
         </member>
-        <member name="M:Contractor.ViewModel.RoundProgressBarViewModel.#ctor(Contractor.Enums.TimerType)">
+        <member name="M:Contractor.ViewModel.RoundProgressBarViewModel.#ctor(Contractor.Enums.TimerType,Contractor.ViewModel.TimerCarouselViewModel)">
             <summary>
             Creates the RoundProgessBar(ClockDrawable)
             </summary>

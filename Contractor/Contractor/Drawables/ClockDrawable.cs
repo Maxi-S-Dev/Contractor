@@ -61,7 +61,7 @@ namespace Contractor.Drawables
         public void SetDegreesUsingPercent(float percent)
         {
             degree = -3.6f * percent;
-            if (degree > 0) Color = Color.FromArgb("#FF990000");
+            if (degree > 0) Color = Color.FromArgb("#FFff483b");
             else SetMainColor();
         }
 
