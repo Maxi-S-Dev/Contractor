@@ -11,6 +11,8 @@ namespace Contractor.Utils
 
         public static Task Load()
         {
+
+            Trace.WriteLine("Loading");
             if (!File.Exists(path)) return Task.CompletedTask;
 
             StreamReader sr = new StreamReader(path);
