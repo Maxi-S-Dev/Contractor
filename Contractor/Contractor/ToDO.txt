@@ -7,6 +7,12 @@ Add stop timer during app pause setting
 Switch Pages acording to the current timer
 
 
+
+The app does not save the first time it is opened
+If the app is not paused properly, then it is not saved either
+If it does not save properly, then either the old values are in there, or the .JSON file is broken
+
+
 Premium:
 Add custom colors
 Save File in specific location (Cloud? Crossplattform usage?)
