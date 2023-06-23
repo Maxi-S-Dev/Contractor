@@ -1,9 +1,12 @@
-change main colors 
-MainColor: #7326FC
-SecondaryColor: #985EFF
-
 Add icons
+Add splash Screen
 Add info/help text
-Add custom colors (Premium)
 Add history
 Add reset Button in Settings
+Add stop timer during app pause setting
+Switch Pages acording to the current timer
+
+
+Premium:
+Add custom colors
+Save File in specific location (Cloud? Crossplattform usage?)
