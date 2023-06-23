@@ -79,31 +79,34 @@
         <Label Text="General Settings"
                Style="{StaticResource Heading}"/>
 
-        <!-- Max Free Time-->
+        <!-- Max Pord Time-->
         <Grid Grid.Row="1" 
-              Style="{StaticResource OptionContainer}">
+              Style="{StaticResource OptionContainer}"
+              x:Name="MaxProdTimeGrid">
 
             <Label Text="Maximum Productive Time per Day"/>
 
-            <Entry Text="{Binding MaxProdTime}"/>
+            
         </Grid>
 
         <!-- Max Free Time-->
         <Grid Grid.Row="2" 
-              Style="{StaticResource OptionContainer}">
+              Style="{StaticResource OptionContainer}"
+              x:Name="MaxFreeTimeGrid">
 
             <Label Text="Maximum Free Time per Day"/>
 
-            <Entry Text="{Binding MaxFreeTime}"/>
+            
         </Grid>
 
         <!-- Factor -->
         <Grid Grid.Row="3" 
-              Style="{StaticResource OptionContainer}">
+              Style="{StaticResource OptionContainer}"
+              x:Name="FactorGrid">
 
             <Label Text="Factor between Productive and Free Time"/>
 
-            <Entry Text="{Binding Factor}"/>
+            
         </Grid>
 
         <!-- Carry Free Time Over -->

@@ -1,11 +1,4 @@
-﻿using Contractor.Drawables;
-using Contractor.Utils;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Contractor.Utils;
 using System.Windows.Input;
 
 namespace Contractor.ViewModel
@@ -25,7 +18,7 @@ namespace Contractor.ViewModel
         }
 
         //First half of the Free Time Button Text 
-        private string freeTimeButtonText = "Start Being ";
+        private string freeTimeButtonText = "Start your ";
         public string FreeTimeButtonText
         {
             get => freeTimeButtonText;
@@ -47,16 +40,42 @@ namespace Contractor.ViewModel
             }
         }
 
+        public FreeTimeInfoTextViewModel freeTimeInfoTextViewModel { get; set; }
+        public FreeTimeInfoTextViewModel FreeTimeInfoTextViewModel 
+        {
+            get => freeTimeInfoTextViewModel; 
+            set
+            {
+                freeTimeInfoTextViewModel = value;
+                OnPropertyChanged(nameof(FreeTimeInfoTextViewModel));
+            }
+        }
+
         public ICommand FreeTimeCommand { get; private set; }
         public ICommand ProductiveTimeCommand { get; private set; }
+
+        private SynchronizationContext _uiContext;
+
 
         /// <summary>
         /// Creates the View Model for the Carousel/ListView
         /// </summary>
         public MainViewModel() 
         {
-            TimerCarouselVm = new TimerCarouselViewModel();
-            DataSaver.Load();
+            _uiContext = SynchronizationContext.Current;
+
+
+            TimerCarouselVm = new TimerCarouselViewModel(this);
+            FreeTimeInfoTextViewModel = new FreeTimeInfoTextViewModel(this);
+
+            DataSaver.Load().ContinueWith(task =>
+            {
+                _uiContext.Post(_ =>
+                {
+                    OnPropertyChanged(nameof(Services.DataStore));
+                }, null);
+            });
+            OnPropertyChanged("Time");
             CreateCommands();
         }
 

@@ -41,7 +41,8 @@
                    FontFamily="RobotoBlack"
                    FontSize="40" />
 
-            <components:FreeTimeInfoText Grid.Row="1" />
+            <components:FreeTimeInfoText Grid.Row="1"
+                                         BindingContext="{Binding FreeTimeInfoTextViewModel}"/>
         </Grid>
 
         <Grid Grid.Row="1"
@@ -53,7 +54,7 @@
               RowDefinitions="auto, auto"
               RowSpacing="4">
 
-            <Border Background="#6200EE">
+            <Border Background="{StaticResource Primary}">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10" />
                 </Border.StrokeShape>
@@ -74,7 +75,7 @@
             </Border>
 
             <Border Grid.Row="1"
-                    Background="#7F39FB">
+                    Background="{StaticResource Secondary}">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10" />
                 </Border.StrokeShape>

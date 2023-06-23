@@ -1,4 +1,5 @@
 ﻿using Contractor.Enums;
+using Contractor.Utils;
 
 namespace Contractor;
 
@@ -14,15 +15,15 @@ public partial class App : Application
 
         if(wantedDesign == Design.Default.ToString())
         {
-            Application.Current.UserAppTheme = AppTheme.Unspecified;
+            Current.UserAppTheme = AppTheme.Unspecified;
         }
         else if (wantedDesign == Design.Light.ToString())
         {
-            Application.Current.UserAppTheme = AppTheme.Light;
+            Current.UserAppTheme = AppTheme.Light;
         }
         else if (wantedDesign == Design.Dark.ToString()) 
         {
-            Application.Current.UserAppTheme = AppTheme.Dark;
+            Current.UserAppTheme = AppTheme.Dark;
         }
 
 
@@ -40,11 +41,29 @@ public partial class App : Application
             Window.Height = 700;
         }
 
+        Window.Created += (s, e) =>
+        {
+            Load();
+        };
+
+        Window.Resumed += (s, e) =>
+        {
+            Load();
+        };
+
         Window.Destroying += (s, e) =>
         {
-            Utils.DataSaver.Save();
+            Save();
+        };
+
+        Window.Stopped += (s, e) =>
+        {
+            Save();
         };
 
         return Window;
     }
+
+    private void Load() => DataSaver.Load();
+    private void Save() => DataSaver.Save();
 }

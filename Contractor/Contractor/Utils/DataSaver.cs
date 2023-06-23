@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using Contractor.Interfaces;
+﻿using Contractor.Services;
 using System.Diagnostics;
-using System.ComponentModel;
-using Contractor.Services;
+using System.IO;
 
 namespace Contractor.Utils
 {
@@ -15,43 +8,70 @@ namespace Contractor.Utils
     {
         static string directoryPath = FileSystem.Current.AppDataDirectory;
         static string fileName = "AppData.json";
+        static string path = Path.Combine(directoryPath, fileName);
 
-        public static void Load()
-        { 
-            string path = Path.Combine(directoryPath, fileName);
+        public static Task Load()
+        {
 
+            Trace.WriteLine("Loading");
+            if (!File.Exists(path)) return Task.CompletedTask;
+            Trace.WriteLine("File Exists");
+            StreamReader sr = new StreamReader(path);
             //File.Delete(path);
 
-            if (!File.Exists(path))
-            {
-                File.Create(path);
-                return;
-            }
-
-            string json = File.ReadAllText(path);
-
-            if (string.IsNullOrEmpty(json)) return;
+            string json = sr.ReadToEnd();
+            sr.Close();
+            Trace.WriteLine($"json string: {json}");
 
             var saveData = JSONSerializer.JSONToSaveData(json);
 
-            Trace.WriteLine(path);
+            if(saveData is null) return Task.CompletedTask;
+            Trace.WriteLine("Save Data is not empty");
+
+            if (saveData.lastDate == DateTime.Today) Mapper.SaveDataToAppData(saveData);
+
+            else if (Preferences.Get("resetFreeTime", true) == false)
+            {
+                (Application.Current.Handler.MauiContext.Services.GetService(typeof(DataStore)) as DataStore).FreeSeconds = saveData.FreeSeconds;
+            }
+            return Task.CompletedTask;
+        }
+
+        /*
+        public static Task Load(bool debug)
+        {
+            if (!File.Exists(path)) return Task.CompletedTask;
+
+            string json = File.ReadAllText(path);
+
+            if(json.EndsWith("}}")) json = json.Replace("}}", "}");
+
+            if (string.IsNullOrEmpty(json)) return Task.CompletedTask;
+
+            var saveData = JSONSerializer.JSONToSaveData(json);
 
             if (saveData.lastDate == DateTime.Today) Mapper.SaveDataToAppData(saveData);
             else if (saveData.lastDate == DateTime.Today.AddDays(-1).Date && Preferences.Get("resetFreeTime", true) == false)
             {
                 (Application.Current.Handler.MauiContext.Services.GetService(typeof(DataStore)) as DataStore).FreeSeconds = saveData.FreeSeconds;
             }
+            return Task.CompletedTask;
         }
+        */
 
-        public static void Save()
+        public static async void Save()
         {
-            string path = Path.Combine(directoryPath, fileName);
-
+            Trace.WriteLine("saving");
             var saveData = Mapper.AppDataToSaveData();
 
             string json = JSONSerializer.SaveDataToJSON(saveData);
+            Trace.WriteLine($"Saving json: {json}");
 
-            File.WriteAllText(path, json);
+            using FileStream outputStream = File.OpenWrite(path);
+            using StreamWriter streamWriter = new StreamWriter(outputStream);
+            await streamWriter.WriteAsync(json);
+            streamWriter.Close();
+            Trace.WriteLine("json written");
         }
     }
 }

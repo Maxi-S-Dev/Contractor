@@ -1,0 +1,12 @@
+Add icons
+Add splash Screen
+Add info/help text
+Add history
+Add reset Button in Settings
+Add stop timer during app pause setting
+Switch Pages acording to the current timer
+
+
+Premium:
+Add custom colors
+Save File in specific location (Cloud? Crossplattform usage?)

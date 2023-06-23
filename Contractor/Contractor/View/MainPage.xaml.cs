@@ -32,10 +32,4 @@ public partial class MainPage : ContentPage
             ProgressbarGrid.Add(component);
         }
     }
-
-    private void Button_Clicked(object sender, EventArgs e)
-    {
-        Trace.WriteLine("clicked");
-    }
 }
-

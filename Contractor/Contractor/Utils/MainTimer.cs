@@ -35,10 +35,11 @@ namespace Contractor.Utils
         //Timer Setup
         private static void SetUpTimer()
         {
-            Dispatcher.Interval = TimeSpan.FromSeconds(.01);
+            Dispatcher.Interval = TimeSpan.FromSeconds(1);
 
             Dispatcher.Tick += (s, e) =>
             {
+                //Trace.WriteLine("Tick");
                 if (currentTimer == TimerType.Productive)
                     dataStore.IncreaseProd();
                 else
