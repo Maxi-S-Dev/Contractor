@@ -7094,7 +7094,7 @@ target triple = "i686-unknown-linux-android"
 	}, 
 	; 19
 	%struct.TypeMapModule {
-		[16 x i8] c"f\00\F1D\1D\0A\FAC\BFn\A6\DE\83\88>\0F", ; module_uuid: 44f10066-0a1d-43fa-bf6e-a6de83883e0f
+		[16 x i8] c"n\916\11@\B5\1EE\A6:\AC\99\EFc\85<", ; module_uuid: 1136916e-b540-451e-a63a-ac99ef63853c
 		i32 2, ; entry_count
 		i32 0, ; duplicate_count
 		%struct.TypeMapModuleEntry* getelementptr inbounds ([2 x %struct.TypeMapModuleEntry], [2 x %struct.TypeMapModuleEntry]* @module19_managed_to_java, i32 0, i32 0), ; map

@@ -6,3 +6,4 @@ Add icons
 Add info/help text
 Add custom colors (Premium)
 Add history
+Add reset Button in Settings

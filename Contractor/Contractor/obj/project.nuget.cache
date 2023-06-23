@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b8lyZuTKcjjvK5Zsu7WhvoUs2/+mkp3Fh+lFS8XRsuk9H4pH21Z4Pgeo9PoMjk0zBeBo197JmCbMFIEt1Fuu6g==",
+  "dgSpecHash": "eg0DEll0HU0I324eDmFlvOxwEvEhAYPbRunZd/Z279syvnjZnO5WcyyisQjUcVcDepJfQYiCycBciDRzCfb5tw==",
   "success": true,
   "projectFilePath": "C:\\Github\\Contractor\\Contractor\\Contractor\\Contractor.csproj",
   "expectedPackageFiles": [
@@ -100,7 +100,6 @@
     "C:\\Users\\max03\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.7.20.1\\xamarin.kotlin.stdlib.jdk8.1.7.20.1.nupkg.sha512",
     "C:\\Users\\max03\\.nuget\\packages\\xamarin.kotlinx.coroutines.android\\1.6.4.1\\xamarin.kotlinx.coroutines.android.1.6.4.1.nupkg.sha512",
     "C:\\Users\\max03\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.6.4.1\\xamarin.kotlinx.coroutines.core.jvm.1.6.4.1.nupkg.sha512",
-    "C:\\Users\\max03\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\7.0.7\\microsoft.netcore.app.crossgen2.win-x64.7.0.7.nupkg.sha512",
     "C:\\Users\\max03\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22621.28\\microsoft.windows.sdk.net.ref.10.0.22621.28.nupkg.sha512",
     "C:\\Users\\max03\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.7\\microsoft.aspnetcore.app.runtime.win-x64.7.0.7.nupkg.sha512",
     "C:\\Users\\max03\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.7\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.7.nupkg.sha512",
